@@ -1,0 +1,32 @@
+.main-title {
+  font-family: "Montserrat-SemiBold", "Arial", sans-serif;
+  font-size: 3.43rem;
+  line-height: 5rem;
+  color: $sub-dark-color;
+  margin: 0;
+
+  @media (max-width: $tablet-width) {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 1.5rem;
+    line-height: 2.6rem;
+  }
+}
+
+.main-title--underline {
+  padding-bottom: 25px;
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 65%;
+    height: 3px;
+    background-color: $active-color;
+  }
+}

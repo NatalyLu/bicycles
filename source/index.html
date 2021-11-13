@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html id="html" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Наш магазин отбирает только самые лучшие велосипеды для продажи">
+    <meta name="keywords" content="велосипеды, велосипеды спб, детский велосипед, дорожный велосипед, горный велосипед, спорт, туризм">
+    <meta name="image" name="image" content="/img/svg/logo.svg">
+    <meta name="format-detection" content="telephone=yes">
+    <title>MooN</title>
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body id="body">
+    <header>
+      <nav class="main-nav">
+        <input class="button-burger main-nav__burger-input" id="burger" type="checkbox" value="Открыть меню">
+        <label class="button-burger__lines main-nav__burger-lines" for="burger">
+          <span class="button-burger__line"></span>
+        </label>
+        <ul class="main-nav__list">
+          <li>
+            <a href="#areas-list" class="main-nav__link"></a>
+          </li>
+          <li>
+            <a href="#price" class="main-nav__link" ></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="introduce">
+        <picture>
+          <source srcset="/img/main-img.avif 1x, /img/main-img@2x.avif 2x" type="image/avif">
+          <source srcset="/img/main-img.webp 1x, /img/main-img@2x.webp 2x" type="image/webp">
+          <img class="introduce__background" src="/img/main-img.jpg" srcset="/img/main-img@2x.jpg 2x" width="1920" height="860" alt="Дом на горе">
+        </picture>
+        <div class="introduce__wrapper">
+        <a class="main-nav__logo" aria-label="Логотип Moon">
+          <svg width="32" height="24" viewBox="0 0 44 17">
+            <use xlink:href="/img/svg/sprite.svg#logo"></use>
+          </svg>
+        </a>
+          <h1 class="introduce__title main-title"></h1>
+          <p class="introduce__description">
+          </p>
+        </div>
+      </section>
+
+      <section class="popup" id="popup-call">
+        <form action="#" method="POST" class="popup__form form">
+          <button class="form__close">
+            <div><span class="visually-hidden">Закрыть</span></div>
+          </button>
+          <div class="form__first-page">
+            <div class="form__content">
+              <h2 class="form__title">Купить тур</h2>
+              <div class="form__field form__field--phone">
+                <input type="tel" id="phone" name="phone" placeholder="+7 Введите 10 цифр номера" autofocus="autofocus"  maxlength="40" required="true">
+              </div>
+              <div class="form__field form__field--email">
+                <input type="email" id="email" name="email" placeholder="E-mail" maxlength="100" required="true">
+              </div>
+              <button class="form__button button" name="submit" type="submit">Отправить</button>
+            </div>
+          </div>
+          <div class="form__second-page">
+            <p class="form__description description">
+              <span id="first-line">Форма успешно отправлена,</span>
+              <span id="second-line">спасибо! :)</span>
+            </p>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+
+    </footer>
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>

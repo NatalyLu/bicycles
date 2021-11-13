@@ -1,0 +1,21 @@
+html {
+  font-size: 16px;
+  line-height: 28px;
+  font-family: "Montserrat-Regular", "Arial", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: $main-background-color;
+}
+
+img {
+  display: block;
+  object-fit: cover;
+}
+
+// ROTATION ANIMATION
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

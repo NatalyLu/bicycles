@@ -1,0 +1,50 @@
+{
+  "name": "bicycles",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "build": "gulp build",
+    "start": "gulp",
+    "styles": "gulp styles",
+    "test": "npm run stylelint"
+  },
+  "keywords": [
+    "bicycles",
+    "sport"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NatalyLu/bicycles.git"
+  },
+  "author": "Lukashina Natalia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NatalyLu/bicycles/issues"
+  },
+  "homepage": "https://github.com/NatalyLu/bicycles#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "browser-sync": "^2.27.7",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-avif": "^1.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-order": "^1.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-svgstore": "^8.0.0",
+    "gulp-terser-js": "^5.2.2",
+    "gulp-webp": "^4.0.1",
+    "postcss-csso": "^5.0.1",
+    "sass": "^1.43.4"
+  },
+  "dependencies": {
+    "gulp-imagemin": "^7.1.0",
+    "postcss": "^8.3.8"
+  }
+}
