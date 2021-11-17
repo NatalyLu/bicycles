@@ -1,0 +1,83 @@
+.types {
+  background-color: $background-color;
+  padding: 149px 0 147px 0;
+
+  @media (max-width: $tablet-width) {
+    padding: 50px 0 70px 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 50px 0;
+  }
+}
+
+.types__wrapper {
+  @include center;
+}
+
+.types__title {
+  margin-bottom: 90px;
+  text-align: center;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 30px;
+  }
+}
+
+.types__list {
+  @include drop-list-style;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+
+  @media (max-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: -50px;
+    margin-bottom: -50px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-right: 0;
+    margin-bottom: -40px;
+  }
+}
+
+.types__list li.card:nth-child(n) {
+  @media (max-width: $tablet-width) {
+    flex-grow: 1;
+    max-width: 270px;
+    margin: 0 50px 50px 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin: 0 0 40px 0;
+  }
+}
+
+.types__list .card {
+  &:nth-child(1) {
+    margin-top: -30px;
+
+    @media (max-width: $tablet-width) {
+      margin-top: 0;
+    }
+  }
+
+  &:nth-child(2) {
+    margin: 0 20px;
+
+    @media (max-width: $tablet-width) {
+      margin: 0;
+    }
+  }
+
+  &:nth-child(3) {
+    margin-top: -40px;
+
+    @media (max-width: $tablet-width) {
+      margin-top: 0;
+    }
+  }
+}
