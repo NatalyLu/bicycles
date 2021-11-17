@@ -1,0 +1,11 @@
+.sub-title {
+  font-family: "OpenSans-semibold", "Arial", sans-serif;
+  font-size: 1.875rem;
+  line-height: 1.875rem;
+  color: $main-color;
+  margin: 0;
+
+  @media (max-width: $tablet-width) {
+    font-size: 1.5rem;
+  }
+}
