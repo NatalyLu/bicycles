@@ -1,0 +1,26 @@
+.indexed-list {
+  @include drop-list-style;
+  counter-reset: steps;
+}
+
+.indexed-list__item {
+  counter-increment: steps;
+  display: grid;
+  text-align: center;
+  font-family: "OpenSans-regular", "Arial", sans-serif;
+  font-size: 1.375rem;
+  line-height: 2.125rem;
+
+  @media (max-width: $tablet-width) {
+    font-size: 1.125rem;
+  }
+
+  &::before {
+    font-family: "OpenSans-bold", "Arial", sans-serif;
+    font-size: 1.75rem;
+    line-height: 2.375rem;
+    content: "0" counter(steps);
+    color: $active-color;
+    margin-bottom: 18px;
+  }
+}

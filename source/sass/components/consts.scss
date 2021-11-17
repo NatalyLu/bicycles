@@ -1,15 +1,19 @@
 $tablet-width: 1023px;
 $mobile-width: 767px;
 
-$max-width: 1210px; // 1170 + 20*2 => 20- для падингов;
+$max-width: 1166px;
+$max-width-smaller: 874px;
 
-$main-color: #141517;
-$sub-dark-color: #2C2E3F;
-$popup-color: #48494D;
-$opacity-sub-dark: rgba($sub-dark-color, .7);
-$strong-opacity-sub-dark:  rgba($sub-dark-color, .3);
-$active-color: #FE7865;
-$sub-active-color: #F17D4B;
-$main-background-color: #fff;
-$text-light: $main-background-color;
-$light-background: #FBF8F8;
+$main-color: #000000;
+$submain-color: #1F1F1F;
+$middle-text-color: #48494D;
+$secondary-text-color: #1C1C1C;
+$contrast-color: #ffffff;
+$contrast-darker-color: rgba($contrast-color, .7);
+$active-color: #0AD9C6;
+
+$main-background-color: $contrast-color;
+$background-color: #F6F7F9;
+$background-light-color: #F6F6F6;
+
+$inputs-border: #C9CCD4;

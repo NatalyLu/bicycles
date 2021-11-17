@@ -1,23 +1,27 @@
 @font-face {
-  font-family: "Montserrat-Bold";
-  src: url("/fonts/Montserrat-Bold.woff") format("woff"),
-    url("/fonts/Montserrat-Bold.woff2") format("woff2");
+  font-family: "OpenSans-bold";
+  src: url("/fonts/opensans-bold.woff") format("woff"),
+    url("/fonts/opensans-bold.woff2") format("woff2");
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "Montserrat-SemiBold";
-  src: url("/fonts/Montserrat-SemiBold.woff") format("woff"),
-    url("/fonts/Montserrat-SemiBold.woff2") format("woff2");
+  font-family: "OpenSans-semibold";
+  src: url("/fonts/opensans-semibold.woff") format("woff"),
+    url("/fonts/opensans-semibold.woff2") format("woff2");
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "Montserrat-Medium";
-  src: url("/fonts/Montserrat-Medium.woff") format("woff"),
-    url("/fonts/Montserrat-Medium.woff2") format("woff2");
+  font-family: "OpenSans-regular";
+  src: url("/fonts/opensans-regular.woff") format("woff"),
+    url("/fonts/opensans-regular.woff2") format("woff2");
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "Montserrat-Regular";
-  src: url("/fonts/Montserrat-Regular.woff") format("woff"),
-    url("/fonts/Montserrat-Regular.woff2") format("woff2");
+  font-family: "OpenSans-light";
+  src: url("/fonts/opensans-light.woff") format("woff"),
+    url("/fonts/opensans-light.woff2") format("woff2");
+  font-display: swap;
 }

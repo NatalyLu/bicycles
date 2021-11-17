@@ -11,71 +11,129 @@
     <link rel="stylesheet" type="text/css" href="css/style.min.css">
     <meta name="theme-color" content="#ffffff">
   </head>
-  <body id="body">
-    <header>
+  <body>
+    <header class="header">
       <nav class="main-nav">
-        <input class="button-burger main-nav__burger-input" id="burger" type="checkbox" value="Открыть меню">
-        <label class="button-burger__lines main-nav__burger-lines" for="burger">
-          <span class="button-burger__line"></span>
-        </label>
+        <button id="burger" class="button-burger main-nav__burger active open" type="button" aria-expanded="true"  aria-label="Открыть меню"> <!-- #burger, .active .open Используем в js -->
+          <span class="button-burger__line"></span> <!-- .button-burger__line и .element-hidden Используем в js -->
+        </button>
         <ul class="main-nav__list">
           <li>
-            <a href="#areas-list" class="main-nav__link"></a>
+            <a href="#about" class="main-nav__link">О нас</a>
           </li>
           <li>
-            <a href="#price" class="main-nav__link" ></a>
+            <a href="#types" class="main-nav__link">Виды велосипедов</a>
+          </li>
+          <li>
+            <a href="#video" class="main-nav__link">Видео про велосипеды</a>
+          </li>
+          <li>
+            <a href="#contacts" class="main-nav__link">Контакты</a>
           </li>
         </ul>
       </nav>
+      <section class="introduce">
+        <div class="introduce__wrapper">
+          <a class="introduce__logo" aria-label="Логотип Moon">
+            <svg width="68" height="21" viewBox="0 0 68 21">
+              <use xlink:href="/img/svg/sprite.svg#logo"></use>
+            </svg>
+          </a>
+          <h1 class="introduce__title main-title">Мы продаем велосипеды</h1>
+          <p class="introduce__description">Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
+        </div>
+      </section>
     </header>
     <main>
-      <section class="introduce">
-        <picture>
-          <source srcset="/img/main-img.avif 1x, /img/main-img@2x.avif 2x" type="image/avif">
-          <source srcset="/img/main-img.webp 1x, /img/main-img@2x.webp 2x" type="image/webp">
-          <img class="introduce__background" src="/img/main-img.jpg" srcset="/img/main-img@2x.jpg 2x" width="1920" height="860" alt="Дом на горе">
-        </picture>
-        <div class="introduce__wrapper">
-        <a class="main-nav__logo" aria-label="Логотип Moon">
-          <svg width="32" height="24" viewBox="0 0 44 17">
-            <use xlink:href="/img/svg/sprite.svg#logo"></use>
-          </svg>
-        </a>
-          <h1 class="introduce__title main-title"></h1>
-          <p class="introduce__description">
-          </p>
+      <section class="form-section">
+        <form action="#" method="POST" class="form-section__form form">
+          <p class="form__description">Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
+          <div class="form__field form__field--name">
+            <input type="text" id="name" name="name" placeholder="Введите Ваше Имя" maxlength="100">
+          </div>
+          <div class="form__field form__field--phone">
+            <input type="tel" id="phone" name="phone" placeholder="Введите Ваш номер телефона" autofocus="autofocus"  maxlength="40" required="true">
+          </div>
+          <button class="form__button button" name="submit" type="submit">Подобрать велосипед мечты</button>
+        </form>
+      </section>
+
+      <section class="about" id="about">
+        <h2 class="sub-title about__title">Несколько фактов о нас</h2>
+        <ol class="about__items indexed-list">
+          <li class="indexed-list__item">Самый широкий выбор велосипедов!</li>
+          <li class="indexed-list__item">Доставка велосипедов по всей России!</li>
+          <li class="indexed-list__item">Большой выбор крутых аксессуаров!</li>
+          <li class="indexed-list__item">Профессиональные консультации!</li>
+        </ol>
+      </section>
+
+      <section class="types" id="types">
+        <div class="types__wrapper">
+          <h2 class="sub-title types__title">Виды велосипедов</h2>
+          <ul class="types__list">
+            <li class="card">
+              <figure>
+                <picture>
+                  <source srcset="/img/catalog/bicycle-1.avif 1x, /img/catalog/bicycle-1@2x.avif 2x" type="image/avif">
+                  <source srcset="/img/catalog/bicycle-1.webp 1x, /img/catalog/bicycle-1@2x.webp 2x" type="image/webp">
+                  <img class="card__img" src="/img/catalog/bicycle-1.jpg" srcset="/img/catalog/bicycle-1@2x.jpg 2x" width="342" height="503" alt="Вид велосипеда">
+                </picture>
+                <figcaption class="card__description">Дорожный велосипед</figcaption>
+              </figure>
+            </li>
+            <li class="card">
+              <figure>
+                <picture>
+                  <source srcset="/img/catalog/bicycle-2.avif 1x, /img/catalog/bicycle-2@2x.avif 2x" type="image/avif">
+                  <source srcset="/img/catalog/bicycle-2.webp 1x, /img/catalog/bicycle-2@2x.webp 2x" type="image/webp">
+                  <img class="card__img" src="/img/catalog/bicycle-2.jpg" srcset="/img/catalog/bicycle-2@2x.jpg 2x" width="342" height="503" alt="Вид велосипеда">
+                </picture>
+                <figcaption class="card__description">Горный велосипед</figcaption>
+              </figure>
+            </li>
+            <li class="card">
+              <figure>
+                <picture>
+                  <source srcset="/img/catalog/bicycle-3.avif 1x, /img/catalog/bicycle-3@2x.avif 2x" type="image/avif">
+                  <source srcset="/img/catalog/bicycle-3.webp 1x, /img/catalog/bicycle-3@2x.webp 2x" type="image/webp">
+                  <img class="card__img" src="/img/catalog/bicycle-3.jpg" srcset="/img/catalog/bicycle-3@2x.jpg 2x" width="342" height="503" alt="Вид велосипеда">
+                </picture>
+                <figcaption class="card__description">Детский велосипед</figcaption>
+              </figure>
+            </li>
+          </ul>
         </div>
       </section>
 
-      <section class="popup" id="popup-call">
-        <form action="#" method="POST" class="popup__form form">
-          <button class="form__close">
-            <div><span class="visually-hidden">Закрыть</span></div>
-          </button>
-          <div class="form__first-page">
-            <div class="form__content">
-              <h2 class="form__title">Купить тур</h2>
-              <div class="form__field form__field--phone">
-                <input type="tel" id="phone" name="phone" placeholder="+7 Введите 10 цифр номера" autofocus="autofocus"  maxlength="40" required="true">
-              </div>
-              <div class="form__field form__field--email">
-                <input type="email" id="email" name="email" placeholder="E-mail" maxlength="100" required="true">
-              </div>
-              <button class="form__button button" name="submit" type="submit">Отправить</button>
-            </div>
-          </div>
-          <div class="form__second-page">
-            <p class="form__description description">
-              <span id="first-line">Форма успешно отправлена,</span>
-              <span id="second-line">спасибо! :)</span>
-            </p>
-          </div>
-        </form>
+      <section class="video" id="video">
+        <div class="video__wrapper">
+          <h2 class="sub-title">Видео про велосипеды</h2>
+          <p class="video__description">В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
+          <video src="#" width="929" height="522" poster="/img/video/video-poster.jpg"></video>
+          <button class="video__play" type="button"><span class="visually-hidden">Воспроизвести</span></button>
+        </div>
       </section>
     </main>
 
-    <footer class="footer">
-
+    <footer class="contacts" id="contacts">
+      <h2 class="sub-title">Как нас найти?</h2>
+      <p class="contacts__description">Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
+      <!-- map -->
+      <ul class="contacts__list">
+        <li class="contacts__item">
+          <svg width="26" height="20" viewBox="0 0 26 20">
+            <use xlink:href="/img/svg/sprite.svg#letter"></use>
+          </svg>
+          <a href="mailto:puteshestviemechta@gmail.ru" aria-label="Электронная почта">puteshestviemechta@gmail.ru</a>
+        </li>
+        <li class="contacts__item">
+          <svg width="17" height="24" viewBox="0 0 17 24">
+            <use xlink:href="/img/svg/sprite.svg#phone"></use>
+          </svg>
+          <a href="tel:{+7(499)784-684-46}" aria-label="Телефон для связи">+7 (499) -784-684-46</a>
+        </li>
+      </ul>
     </footer>
     <script type="text/javascript" src="js/script.js"></script>
   </body>

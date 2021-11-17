@@ -1,69 +1,85 @@
 .button-burger {
-  position: absolute;
-  opacity: 0;
-}
-
-.button-burger__lines {
+  display: none;
+  justify-content: center;
+  align-items: center;
   width: 50px;
   height: 50px;
+  padding: 0;
   cursor: pointer;
+  border: none;
   background-color: $active-color;
+  transition-duration: .5s;
+
+  &:hover,
+  &:focus {
+    filter: brightness(115%);
+  }
+
+  &.active {
+    @media (max-width: $tablet-width) {
+      display: flex;
+    }
+  }
 }
 
 .button-burger__line {
+  position: relative;
+
   &,
   &::before,
   &::after {
     width: 23px;
     height: 1px;
-    background-color: $main-background-color;
+    background-color: $main-color;
   }
 
   &::before,
   &::after {
     content: "";
+    top: 0;
+    left: 0;
     position: absolute;
     transition-duration: .3s;
   }
 
   &::before {
-    transform: translateY(-6px);
+    transform: translateY(-5px);
   }
 
   &::after {
-    transform: translateY(6px);
+    transform: translateY(5px);
   }
 }
 
-.button-burger:checked {
-  ~ .button-burger__lines{
-    background-color: transparent;
-  }
-  ~ .button-burger__lines > .button-burger__line,
-  ~ .button-burger__lines > .button-burger__line::before,
-  ~ .button-burger__lines > .button-burger__line::after {
-    background-color: rgba($main-color, .8);
-  }
+.button-burger.open {
+  background-color: transparent;
 
-  ~ .button-burger__lines > .button-burger__line {
+  .button-burger__line {
     height: 0;
   }
 
-  ~ .button-burger__lines > .button-burger__line::before,
-  ~ .button-burger__lines > .button-burger__line::after {
+  .button-burger__line::before,
+  .button-burger__line::after {
+    background-color: rgba($main-color, .2);
     width: 30px;
+    transition-duration: .3s;
   }
 
-  ~ .button-burger__lines > .button-burger__line::before {
+  .button-burger__line::before {
     transform: rotate(45deg);
   }
 
-  ~ .button-burger__lines > .button-burger__line::after {
+  .button-burger__line::after {
     transform: rotate(-45deg);
   }
-}
 
-.button-burger:active ~ .button-burger__lines,
-.button-burger:focus ~ .button-burger__lines {
-  opacity: 0.8;
+  &:hover,
+  &:focus {
+    filter: brightness(100%);
+
+    .button-burger__line::before,
+    .button-burger__line::after {
+      background-color: rgba($main-color, .7);
+    }
+  }
 }
