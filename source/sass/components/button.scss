@@ -2,47 +2,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Montserrat-Bold", "Arial", sans-serif;
-  font-size: .75rem;
-  line-height: .875rem;
-  padding: 30px 40px;
-  color: $text-light;
+  font-family: "OpenSans-semibold", "Arial", sans-serif;
+  font-size: 1rem;
+  line-height: 1.3rem;
+  padding: 15px;
+  color: $main-color;
   background-color: $active-color;
   border: none;
-  text-transform: uppercase;
+  border-radius: 6px;
   text-decoration: none;
-  box-sizing: border-box;
-
-  @media (max-width: $tablet-width) {
-    padding: 19px;
-    max-width: 288px;
-    width: 100%;
-    font-family: "Montserrat-Medium", "Arial", sans-serif;
-    font-size: .625rem;
-    line-height: .75rem;
-  }
+  cursor: pointer;
 
   &:hover,
   &:focus {
-    background-color: $sub-active-color;
-  }
-}
-
-.button--arrow {
-  justify-content: space-between;
-
-  svg {
-    width: 14px;
-    height: 14px;
-    fill: none;
-    margin-left: 10px;
-    transition: all .3s ease;
-  }
-
-  &:hover,
-  &:focus {
-    svg {
-      transform: translateY(4px);
-    }
+    filter: brightness(115%);
   }
 }
