@@ -5,7 +5,8 @@ $max-width: 1166px;
 $max-width-smaller: 874px;
 
 $main-color: #000000;
-// $submain-color: #1F1F1F;
+$main-color-opacity: rgba($main-color, .7);
+$submain-color: #1F1F1F;
 $middle-text-color: #48494D;
 $secondary-text-color: #1C1C1C;
 $contrast-color: #ffffff;
