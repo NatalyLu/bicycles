@@ -14,7 +14,7 @@
   <body>
     <header class="header">
       <nav class="main-nav">
-        <button id="burger" class="button-burger main-nav__burger active open" type="button" aria-expanded="true"  aria-label="Открыть меню"> <!-- #burger, .active .open Используем в js -->
+        <button id="burger" class="button-burger main-nav__burger open" type="button" aria-expanded="true"  aria-label="Открыть меню"> <!-- поиск кнопки производится по id => #burger, .active .open Используем в js, добавление/удаление .active - для показа/скрытия самой кнопки-гамбургер, .open - для превращения гамбургера в крест -->
           <span class="button-burger__line"></span> <!-- .button-burger__line и .element-hidden Используем в js -->
         </button>
         <ul class="main-nav__list">
@@ -108,10 +108,12 @@
 
       <section class="video" id="video">
         <div class="video__wrapper">
-          <h2 class="sub-title">Видео про велосипеды</h2>
+          <h2 class="video__title sub-title">Видео про велосипеды</h2>
           <p class="video__description">В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
-          <video src="#" width="929" height="522" poster="/img/video/video-poster.jpg"></video>
-          <button class="video__play" type="button"><span class="visually-hidden">Воспроизвести</span></button>
+          <div class="video__player">
+            <video class="video__content" src="#" width="929" height="522" poster=""></video>
+            <button class="video__button-play button-play" type="button"><span class="visually-hidden">Воспроизвести</span></button>
+          </div>
         </div>
       </section>
     </main>
