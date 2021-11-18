@@ -1,4 +1,4 @@
-.contacts {
+.address {
   @include center;
   display: flex;
   flex-direction: column;
@@ -17,7 +17,7 @@
   }
 }
 
-.contacts__title {
+.address__title {
   margin-bottom: 30px;
 
   @media (max-width: $tablet-width) {
@@ -25,7 +25,7 @@
   }
 }
 
-.contacts__description {
+.address__description {
   max-width: 555px;
   font-family: "OpenSans-regular", "Arial", sans-serif;
   font-size: 1.125rem;
@@ -44,7 +44,7 @@
   }
 }
 
-.contacts__map {
+.address__map {
   display: flex;
   max-width: 957px;
   width: 100%;
