@@ -4,9 +4,11 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 131px;
+  padding-top: 50px;
 
   @media (max-width: $tablet-width) {
     margin: 0 16px 70px 16px;
+    padding-top: 20px;
   }
 }
 

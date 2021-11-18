@@ -5,11 +5,12 @@
   justify-content: flex-end;
   position: relative;
   margin-top: -506px;
-  margin-bottom: 390px;
+  margin-bottom: 340px;
 
   @media (max-width: $tablet-width) {
     justify-content: center;
-    margin: 0 16px 70px 16px;
+    margin: 0 auto 50px auto;
+    padding: 0 16px;
   }
 }
 
