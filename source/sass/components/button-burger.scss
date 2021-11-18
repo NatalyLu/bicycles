@@ -56,6 +56,7 @@
 
   .button-burger__line {
     height: 0;
+    transition-duration: .3s;
   }
 
   .button-burger__line::before,
@@ -80,6 +81,11 @@
     .button-burger__line::before,
     .button-burger__line::after {
       background-color: rgba($main-color, .7);
+    }
+
+    .button-burger__line {
+      transform: rotate(90deg);
+      transform-origin: center center;
     }
   }
 }

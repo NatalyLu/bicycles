@@ -39,7 +39,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    margin-right: 0;
+    margin-right: -20px;
     margin-bottom: -40px;
   }
 }
@@ -52,7 +52,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    margin: 0 0 40px 0;
+    margin: 0 20px 40px 20px;
   }
 }
 

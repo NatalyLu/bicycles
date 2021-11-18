@@ -1,0 +1,42 @@
+.button-play {
+  width: 65px;
+  height: 65px;
+  position: relative;
+  border-radius: 50%;
+  background-color: $active-color;
+  border: none;
+  cursor: pointer;
+  transition-duration: .5s;
+
+  @media (min-width: $mobile-width) and (max-width: $tablet-width) {
+    width: 90px;
+    height: 90px;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: calc(50% + 2px);
+    transform: translate(-50%, -50%);
+    border: 13px solid transparent;
+    border-left-color: $button-element-color;
+    border-top-width: 9px;
+    border-bottom-width: 9px;
+    border-right: none;
+
+    @media (min-width: $mobile-width) and (max-width: $tablet-width) {
+      border-left-width: 18px;
+      border-top-width: 13px;
+      border-bottom-width: 13px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    filter: brightness(115%);
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}

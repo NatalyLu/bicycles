@@ -14,7 +14,7 @@
   <body>
     <header class="header">
       <nav class="main-nav">
-        <button id="burger" class="button-burger main-nav__burger active open" type="button" aria-expanded="true"  aria-label="Открыть меню"> <!-- #burger, .active .open Используем в js -->
+        <button id="burger" class="button-burger main-nav__burger open" type="button" aria-expanded="true"  aria-label="Открыть меню"> <!-- поиск кнопки производится по id => #burger, .active .open Используем в js, добавление/удаление .active - для показа/скрытия самой кнопки-гамбургер, .open - для превращения гамбургера в крест -->
           <span class="button-burger__line"></span> <!-- .button-burger__line и .element-hidden Используем в js -->
         </button>
         <ul class="main-nav__list">
@@ -28,7 +28,7 @@
             <a href="#video" class="main-nav__link">Видео про велосипеды</a>
           </li>
           <li>
-            <a href="#contacts" class="main-nav__link">Контакты</a>
+            <a href="#address" class="main-nav__link">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -108,30 +108,43 @@
 
       <section class="video" id="video">
         <div class="video__wrapper">
-          <h2 class="sub-title">Видео про велосипеды</h2>
+          <h2 class="video__title sub-title">Видео про велосипеды</h2>
           <p class="video__description">В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
-          <video src="#" width="929" height="522" poster="/img/video/video-poster.jpg"></video>
-          <button class="video__play" type="button"><span class="visually-hidden">Воспроизвести</span></button>
+          <div class="video__player">
+            <video class="video__content" src="#" width="929" height="522" poster=""></video>
+            <button class="video__button-play button-play" type="button"><span class="visually-hidden">Воспроизвести</span></button>
+          </div>
         </div>
+      </section>
+
+      <section class="address" id="address">
+        <h2 class="address__title sub-title">Как нас найти?</h2>
+        <p class="address__description">Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
+        <iframe class="address__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Aebbecb84e95bc0420b0250f72e9891f62794e01027d1c7d115cec678d9767722&amp;source=constructor" width="957" height="530" frameborder="0"></iframe>
       </section>
     </main>
 
-    <footer class="contacts" id="contacts">
-      <h2 class="sub-title">Как нас найти?</h2>
-      <p class="contacts__description">Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
-      <!-- map -->
-      <ul class="contacts__list">
-        <li class="contacts__item">
-          <svg width="26" height="20" viewBox="0 0 26 20">
-            <use xlink:href="/img/svg/sprite.svg#letter"></use>
-          </svg>
-          <a href="mailto:puteshestviemechta@gmail.ru" aria-label="Электронная почта">puteshestviemechta@gmail.ru</a>
+    <footer class="footer">
+      <ul class="contacts">
+        <li>
+          <a class="contacts__link" href="mailto:puteshestviemechta@gmail.ru" aria-label="Электронная почта" tabindex="1">
+            <svg class="contacts__img" width="26" height="20" viewBox="0 0 26 20">
+              <use xlink:href="/img/svg/sprite.svg#letter"></use>
+            </svg>
+            <span>
+              puteshestviemechta@gmail.ru
+            </span>
+          </a>
         </li>
-        <li class="contacts__item">
-          <svg width="17" height="24" viewBox="0 0 17 24">
-            <use xlink:href="/img/svg/sprite.svg#phone"></use>
-          </svg>
-          <a href="tel:{+7(499)784-684-46}" aria-label="Телефон для связи">+7 (499) -784-684-46</a>
+        <li>
+          <a class="contacts__link" href="tel:{+7(499)784-684-46}" aria-label="Телефон для связи" tabindex="1">
+            <svg class="contacts__img" width="17" height="24" viewBox="0 0 17 24">
+              <use xlink:href="/img/svg/sprite.svg#phone"></use>
+            </svg>
+            <span>
+              +7 (499) -784-684-46
+            </span>
+          </a>
         </li>
       </ul>
     </footer>
