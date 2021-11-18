@@ -6,6 +6,7 @@
   background-color: $active-color;
   border: none;
   cursor: pointer;
+  transition-duration: .5s;
 
   @media (min-width: $mobile-width) and (max-width: $tablet-width) {
     width: 90px;
@@ -36,5 +37,6 @@
   &:hover,
   &:focus {
     filter: brightness(115%);
+    transform: translate(-50%, -50%) scale(1.2);
   }
 }
