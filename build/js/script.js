@@ -1,15 +1,3 @@
-let body = document.querySelector("body");
-let burger = document.querySelector("#burger");
-let list = document.querySelector(".main-nav__list");
-
-let removeClasses = (tag, classNames) => {
-  classNames.map(className => {
-    if (tag.classList.contains(className)) {
-      tag.classList.remove(className);
-    }
-  })
-}
-
 (function () {
   var ESC_KEYCODE = 27;
   var ENTER_KEYCODE = 13;
@@ -18,47 +6,62 @@ let removeClasses = (tag, classNames) => {
   window.util = {
     ESC_KEYCODE: ESC_KEYCODE,
     ENTER_KEYCODE: ENTER_KEYCODE,
-    FORM_ACTION: FORM_ACTION
+    FORM_ACTION: FORM_ACTION,
+
+    body: document.querySelector("body"),
+    burger: document.querySelector("#burger"),
+    list: document.querySelector(".main-nav__list"),
+
+    // Функция удаления класса у элемента (если этот класс у него есть)
+    removeClasses: (tag, classNames) => {
+      classNames.map(className => {
+        if (tag.classList.contains(className)) {
+          tag.classList.remove(className);
+        }
+      });
+    },
+
+    // Функция открытия и закрытия списка меню
+    closeOrOpenMenu: (element) => {
+      let attributeValue;
+      if ((window.util.burger.classList.contains("active")) && (window.util.burger.classList.contains("open"))) {
+        window.util.body.classList.remove("menu-open");
+        window.util.burger.classList.remove("open");
+        attributeValue = "false";
+        element.classList.add("element-hidden");
+      } else {
+        window.util.body.classList.add("menu-open");
+        window.util.burger.classList.add("open");
+        attributeValue = "true";
+        element.classList.remove("element-hidden");
+      }
+      return(attributeValue);
+    },
   };
 })();
 
-let closeOrOpenMenu = (element) => {
-  let attributeValue;
-  if ((burger.classList.contains("active")) && (burger.classList.contains("open"))) {
-    body.classList.remove("menu-open");
-    burger.classList.remove("open");
-    attributeValue = "false";
-    element.classList.add("element-hidden");
-  } else {
-    body.classList.add("menu-open");
-    burger.classList.add("open");
-    attributeValue = "true";
-    element.classList.remove("element-hidden");
-  }
-  return(attributeValue);
-}
-
 (function () {
-  // Если js загружен, скрываем список и показываем кнопку-бургер
-  burger.classList.add("active");
-  burger.classList.remove("open");
-  list.classList.add("element-hidden");
 
-  burger.addEventListener("click", (evt) => {
+  // Если js загружен, скрываем список и показываем кнопку-бургер
+  window.util.burger.classList.add("active");
+  window.util.burger.classList.remove("open");
+  window.util.list.classList.add("element-hidden");
+
+  window.util.burger.addEventListener("click", (evt) => {
     evt.preventDefault();
-    toggleMenu(evt, list);
+    toggleMenu(evt, window.util.list);
   });
 
-  burger.addEventListener("keydown", (evt) => {
+  window.util.burger.addEventListener("keydown", (evt) => {
     if (evt.keyCode === window.util.ENTER_KEYCODE) {
-      toggleMenu(evt, list);
+      toggleMenu(evt, window.util.list);
     }
   });
 
   let toggleMenu = (evt, element) => {
     evt.preventDefault();
-    burger.setAttribute("aria-expanded", closeOrOpenMenu(element));
-  }
+    window.util.burger.setAttribute("aria-expanded", window.util.closeOrOpenMenu(element));
+  };
 })();
 
 let scrollMenu = (blockId) => {
@@ -79,7 +82,7 @@ let scrollMenu = (blockId) => {
   let duration = .4 * Math.abs(to);
 
   // Анимация скролла
-  requestAnimationFrame(step = (timestamp) => {
+  requestAnimationFrame(function step(timestamp) {
     // timestamp метка времени от начала анимации
     // Сколько прошло времени (timestamp - start)
     // (timestamp - start) / duration приравниваем к 1
@@ -99,15 +102,15 @@ let scrollMenu = (blockId) => {
     // Отменяем прокрутку если крутим колесом мышки
     document.addEventListener("wheel", function () {
       cancelAnimationFrame(temp);
-    })
-  })
-}
+    });
+  });
+};
 
-list.addEventListener("click", (evt) => {
+window.util.list.addEventListener("click", (evt) => {
   evt.preventDefault();
-  let link = evt.target.getAttribute("href")
-  closeOrOpenMenu(list);
-  setTimeout(()=>{scrollMenu(link)}, 300);  // 300 = времени анимации скрытия списка меню (прописано в css)
+  let link = evt.target.getAttribute("href");
+  window.util.closeOrOpenMenu(window.util.list);
+  setTimeout(()=>{scrollMenu(link);}, 300);  // 300 = времени анимации скрытия списка меню (прописано в css)
 });
 
 (function () {
@@ -115,7 +118,7 @@ list.addEventListener("click", (evt) => {
   let STATUS = {
     ERROR: "error",
     SUCCESS: "success"
-  }
+  };
 
   let isStorageSupport = true;
   let storagePhone = "";
@@ -140,32 +143,32 @@ list.addEventListener("click", (evt) => {
 
   let addError = (field) => {
     field.classList.add(STATUS.ERROR);
-  }
+  };
 
   let checkPhone = (input) => {
-    return (/^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/.test(input.value));
-  }
+    return (/^(\+7|7|8)?[\s-]?\(?[489][0-9]{2}\)?[\s-]?[0-9]{3}[\s-]?[0-9]{2}[\s-]?[0-9]{2}$/.test(input.value));
+  };
 
   let checkValidate = (form) => {
-    let phoneNumber = form.querySelector("input[name='phone']")
+    let phoneNumber = form.querySelector("input[name='phone']");
     let error = 0;
     if (!checkPhone(phoneNumber)) {
       addError(phoneNumber.parentElement);
       error++;
     } else {
-      removeClasses(phoneNumber.parentElement, [STATUS.ERROR]);
+      window.util.removeClasses(phoneNumber.parentElement, [STATUS.ERROR]);
     }
     return(error);
-  }
+  };
 
   let addStatusClass = (form, className) => {
     form.reset();
     form.classList.add(className);
-  }
+  };
 
-  let sendFormData = async (evt, form, url) => {
+  let sendFormData = async(evt, form, url) => {
     evt.preventDefault();
-    removeClasses(form, [STATUS.ERROR, STATUS.SUCCESS]);
+    window.util.removeClasses(form, [STATUS.ERROR, STATUS.SUCCESS]);
 
     let errors = checkValidate(form);
     if (errors === 0) {
@@ -184,7 +187,7 @@ list.addEventListener("click", (evt) => {
         addStatusClass(form, STATUS.ERROR);
       }
     }
-  }
+  };
 
   getStorage();
 
@@ -194,7 +197,7 @@ list.addEventListener("click", (evt) => {
   });
 
   form.addEventListener("input", (evt) => {
-    removeClasses(evt.target.parentElement, [STATUS.ERROR]);
-    removeClasses(form, [STATUS.ERROR, STATUS.SUCCESS]);
+    window.util.removeClasses(evt.target.parentElement, [STATUS.ERROR]);
+    window.util.removeClasses(form, [STATUS.ERROR, STATUS.SUCCESS]);
   });
 })();
