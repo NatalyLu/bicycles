@@ -3,52 +3,52 @@
   flex-direction: column;
   position: relative;
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     position: absolute;
     content: "";
     visibility: hidden;
     width: 0;
     height: 0;
-    transition: width, height .3s ease-in-out;
+    transition: width, height 0.3s ease-in-out;
   }
 }
 
 .form.success {
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     visibility: visible;
   }
 
-  &:before {
+  &::before {
     width: 100px;
     height: 100px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    border: 8px solid rgba($active-color, .5);
-    background-color: rgba($contrast-color, .7);
+    border: 8px solid rgba($active-color, 0.5);
+    background-color: rgba($contrast-color, 0.7);
   }
 
-  &:after {
+  &::after {
     width: 30px;
     height: 40px;
     top: calc(50% - 33px);
     left: calc(50% - 18px);
     transform: rotate(45deg);
-    border-bottom: 8px solid rgba($active-color, .5);
-    border-right: 8px solid rgba($active-color, .5);
+    border-bottom: 8px solid rgba($active-color, 0.5);
+    border-right: 8px solid rgba($active-color, 0.5);
   }
 }
 
 .form.error {
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     visibility: visible;
   }
 
-  &:before {
+  &::before {
     content: "Ошибка";
     display: flex;
     justify-content: center;
@@ -61,14 +61,14 @@
     transform: translate(-50%, -50%);
     border: 3px solid $error-color;
     border-radius: 6px;
-    background-color: rgba($main-color, .5);
+    background-color: rgba($main-color, 0.5);
     font-family: "OpenSans-bold", "Arial", sans-serif;
     font-size: 1.6rem;
     line-height: 2rem;
     color: $contrast-color;
   }
 
-  &:after {
+  &::after {
     display: none;
   }
 }
@@ -79,13 +79,13 @@
   font-family: "OpenSans-semibold", "Arial", sans-serif;
   line-height: 1.75rem;
   color: $contrast-color;
-  letter-spacing: .4px;
+  letter-spacing: 0.4px;
   text-align: center;
 
   @media (max-width: $tablet-width) {
     color: $main-color;
-    font-size: 1.125rem;
-    letter-spacing: -.4px;
+    font-size: 1.13rem;
+    letter-spacing: -0.4px;
     margin-bottom: 33px;
   }
 
@@ -110,26 +110,27 @@
   border-radius: 6px;
   font-size: 1rem;
   line-height: 1.5rem;
-  letter-spacing: -.4px;
+  letter-spacing: -0.4px;
 
   @media (max-width: $mobile-width) {
     padding: 13px 20px 7px 22px;
-    letter-spacing: -.8px;
+    letter-spacing: -0.8px;
   }
 
   &::placeholder {
-    color: rgba($secondary-text-color, .5);
+    color: rgba($secondary-text-color, 0.5);
 
     @media (max-width: $mobile-width) {
-      letter-spacing: -.8px;
+      letter-spacing: -0.8px;
     }
   }
 
   &:hover,
   &:focus {
     outline: 2px solid $active-color;
+
     &::placeholder {
-      color: rgba($secondary-text-color, .8);
+      color: rgba($secondary-text-color, 0.8);
     }
   }
 }

@@ -6,14 +6,14 @@
   background-color: $active-color;
   border: none;
   cursor: pointer;
-  transition-duration: .5s;
+  transition-duration: 0.5s;
 
   @media (min-width: $mobile-width) and (max-width: $tablet-width) {
     width: 90px;
     height: 90px;
   }
 
-  &:before {
+  &::before {
     content: "";
     position: absolute;
     width: 0;

@@ -41,7 +41,7 @@
 
   @media (max-width: $tablet-width) {
     margin-bottom: 18px;
-    letter-spacing: -.5px;
+    letter-spacing: -0.5px;
   }
 
   @media (max-width: $mobile-width) {
@@ -59,10 +59,10 @@
   color: $contrast-darker-color;
 
   @media (max-width: $tablet-width) {
-    font-size: 1.125rem;
+    font-size: 1.13rem;
   }
 
   @media (max-width: $mobile-width) {
-    letter-spacing: -.5px;
+    letter-spacing: -0.5px;
   }
 }

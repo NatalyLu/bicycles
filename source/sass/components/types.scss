@@ -25,7 +25,7 @@
 
   @media (max-width: $mobile-width) {
     margin-bottom: 32px;
-    letter-spacing: -.6px;
+    letter-spacing: -0.6px;
   }
 }
 
@@ -68,8 +68,6 @@
     margin-top: 0;
   }
 }
-
-
 
 .types__list .card:nth-child(2) {
   margin: 0 20px;

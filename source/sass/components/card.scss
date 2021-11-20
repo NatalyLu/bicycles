@@ -1,15 +1,15 @@
 .card {
   position: relative;
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     content: "";
     position: absolute;
-    transition-duration: .5s;
+    transition-duration: 0.5s;
   }
 
-  &:hover:before,
-  &:hover:after {
+  &:hover::before,
+  &:hover::after {
     transform: scale(1.2);
   }
 
@@ -25,7 +25,7 @@
 .card:nth-child(1) {
   z-index: 0;
 
-  &:before {
+  &::before {
     top: 158px;
     left: -56px;
     width: 126px;
@@ -52,8 +52,8 @@
 }
 
 .card:nth-child(2) {
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     width: 31px;
     height: 31px;
     border: 8px solid $active-color;
@@ -63,27 +63,27 @@
     }
   }
 
-  &:before {
+  &::before {
     top: -16px;
     left: -18px;
   }
 
-  &:after {
+  &::after {
     bottom: 31px;
     right: -22px;
   }
 
-  &:hover:before {
+  &:hover::before {
     transform: scale(1.2) rotate(135deg);
   }
 
-  &:hover:after {
+  &:hover::after {
     transform: scale(1.2) rotate(-135deg);
   }
 }
 
 .card:nth-child(3) {
-  &:before {
+  &::before {
     top: -29px;
     right: -32px;
     width: 61px;
@@ -102,7 +102,6 @@
     @media (max-width: $mobile-width) {
       width: 39px;
       height: 39px;
-      // top: 190px;
       right: -14px;
     }
   }
@@ -127,9 +126,9 @@
 
 .card__description {
   font-family: "OpenSans-semibold", "Arial", sans-serif;
-  font-size: 1.375rem;
-  line-height: 2.125rem;
-  letter-spacing: -.6px;
+  font-size: 1.38rem;
+  line-height: 2.13rem;
+  letter-spacing: -0.6px;
   text-align: center;
 
   @media (max-width: $tablet-width) {

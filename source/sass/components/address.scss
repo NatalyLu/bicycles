@@ -28,9 +28,9 @@
 .address__description {
   max-width: 555px;
   font-family: "OpenSans-regular", "Arial", sans-serif;
-  font-size: 1.125rem;
+  font-size: 1.13rem;
   line-height: 2rem;
-  letter-spacing: -.6px;
+  letter-spacing: -0.6px;
   color: $main-color-opacity;
   margin: 0 0 38px 0;
 
@@ -38,7 +38,7 @@
     max-width: 100%;
     margin-bottom: 20px;
     padding: 0 16px;
-    letter-spacing: -.7px;
+    letter-spacing: -0.7px;
   }
 
   @media (max-width: $mobile-width) {

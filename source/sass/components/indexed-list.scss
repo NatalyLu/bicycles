@@ -8,18 +8,18 @@
   display: grid;
   text-align: center;
   font-family: "OpenSans-regular", "Arial", sans-serif;
-  font-size: 1.375rem;
-  line-height: 2.125rem;
-  letter-spacing: -.6px;
+  font-size: 1.38rem;
+  line-height: 2.13rem;
+  letter-spacing: -0.6px;
 
   @media (max-width: $mobile-width) {
-    font-size: 1.125rem;
+    font-size: 1.13rem;
   }
 
   &::before {
     font-family: "OpenSans-bold", "Arial", sans-serif;
     font-size: 1.75rem;
-    line-height: 2.375rem;
+    line-height: 2.38rem;
     content: "0" counter(steps);
     color: $active-color;
     margin-bottom: 12px;
