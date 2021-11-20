@@ -2,23 +2,23 @@
   display: none;
   justify-content: center;
   align-items: center;
-  width: 50px;
-  height: 50px;
+  width: 49px;
+  height: 49px;
   padding: 0;
   cursor: pointer;
   border: none;
   background-color: $active-color;
-  transition-duration: .5s;
+  transition-duration: 0.5s;
 
   &:hover,
   &:focus {
     filter: brightness(115%);
   }
+}
 
-  &.active {
-    @media (max-width: $tablet-width) {
-      display: flex;
-    }
+.button-burger.active {
+  @media (max-width: $tablet-width) {
+    display: flex;
   }
 }
 
@@ -39,7 +39,7 @@
     top: 0;
     left: 0;
     position: absolute;
-    transition-duration: .3s;
+    transition-duration: 0.3s;
   }
 
   &::before {
@@ -56,14 +56,14 @@
 
   .button-burger__line {
     height: 0;
-    transition-duration: .3s;
+    transition-duration: 0.3s;
   }
 
   .button-burger__line::before,
   .button-burger__line::after {
-    background-color: rgba($main-color, .2);
+    background-color: rgba($main-color, 0.2);
     width: 30px;
-    transition-duration: .3s;
+    transition-duration: 0.3s;
   }
 
   .button-burger__line::before {
@@ -80,7 +80,7 @@
 
     .button-burger__line::before,
     .button-burger__line::after {
-      background-color: rgba($main-color, .7);
+      background-color: rgba($main-color, 0.7);
     }
 
     .button-burger__line {

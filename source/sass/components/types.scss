@@ -1,13 +1,13 @@
 .types {
   background-color: $background-color;
-  padding: 149px 0 147px 0;
+  padding: 149px 0 145px 0;
 
   @media (max-width: $tablet-width) {
-    padding: 50px 0 70px 0;
+    padding: 54px 0 68px 0;
   }
 
   @media (max-width: $mobile-width) {
-    padding: 50px 0;
+    padding: 52px 0 49px 0;
   }
 }
 
@@ -16,11 +16,16 @@
 }
 
 .types__title {
-  margin-bottom: 90px;
+  margin-bottom: 86px;
   text-align: center;
 
   @media (max-width: $tablet-width) {
-    margin-bottom: 30px;
+    margin-bottom: 34px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 32px;
+    letter-spacing: -0.6px;
   }
 }
 
@@ -39,15 +44,15 @@
   }
 
   @media (max-width: $mobile-width) {
-    margin-right: -20px;
-    margin-bottom: -40px;
+    padding: 0 24px;
+    margin: 0 -20px -40px -20px;
   }
 }
 
 .types__list li.card:nth-child(n) {
   @media (max-width: $tablet-width) {
     flex-grow: 1;
-    max-width: 270px;
+    max-width: 264px;
     margin: 0 50px 50px 0;
   }
 
@@ -56,28 +61,26 @@
   }
 }
 
-.types__list .card {
-  &:nth-child(1) {
-    margin-top: -30px;
+.types__list .card:nth-child(1) {
+  margin-top: -30px;
 
-    @media (max-width: $tablet-width) {
-      margin-top: 0;
-    }
+  @media (max-width: $tablet-width) {
+    margin-top: 0;
   }
+}
 
-  &:nth-child(2) {
-    margin: 0 20px;
+.types__list .card:nth-child(2) {
+  margin: 0 20px;
 
-    @media (max-width: $tablet-width) {
-      margin: 0;
-    }
+  @media (max-width: $tablet-width) {
+    margin: 0;
   }
+}
 
-  &:nth-child(3) {
-    margin-top: -40px;
+.types__list .card:nth-child(3) {
+  margin-top: -40px;
 
-    @media (max-width: $tablet-width) {
-      margin-top: 0;
-    }
+  @media (max-width: $tablet-width) {
+    margin-top: 0;
   }
 }

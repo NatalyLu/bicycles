@@ -22,13 +22,17 @@
 }
 
 .introduce__logo {
-  margin-bottom: 30px;
+  margin-bottom: 19px;
 
   @media (max-width: $tablet-width) {
     position: absolute;
-    top: 25px;
+    top: 23px;
     left: 20px;
     margin: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    left: 17px;
   }
 }
 
@@ -36,7 +40,14 @@
   margin-bottom: 1.5rem;
 
   @media (max-width: $tablet-width) {
-    margin-bottom: 1.25rem;
+    margin-bottom: 18px;
+    letter-spacing: -0.5px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 15px;
+    line-height: 2.5rem;
+    letter-spacing: -1px;
   }
 }
 
@@ -44,9 +55,14 @@
   margin: 0;
   font-size: 1.25rem;
   line-height: 2rem;
+  letter-spacing: -0.2px;
   color: $contrast-darker-color;
 
   @media (max-width: $tablet-width) {
-    font-size: 1.125rem;
+    font-size: 1.13rem;
+  }
+
+  @media (max-width: $mobile-width) {
+    letter-spacing: -0.5px;
   }
 }
