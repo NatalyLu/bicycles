@@ -3,7 +3,7 @@
   let STATUS = {
     ERROR: "error",
     SUCCESS: "success"
-  }
+  };
 
   let isStorageSupport = true;
   let storagePhone = "";
@@ -28,32 +28,32 @@
 
   let addError = (field) => {
     field.classList.add(STATUS.ERROR);
-  }
+  };
 
   let checkPhone = (input) => {
-    return (/^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/.test(input.value));
-  }
+    return (/^(\+7|7|8)?[\s-]?\(?[489][0-9]{2}\)?[\s-]?[0-9]{3}[\s-]?[0-9]{2}[\s-]?[0-9]{2}$/.test(input.value));
+  };
 
   let checkValidate = (form) => {
-    let phoneNumber = form.querySelector("input[name='phone']")
+    let phoneNumber = form.querySelector("input[name='phone']");
     let error = 0;
     if (!checkPhone(phoneNumber)) {
       addError(phoneNumber.parentElement);
       error++;
     } else {
-      removeClasses(phoneNumber.parentElement, [STATUS.ERROR]);
+      window.util.removeClasses(phoneNumber.parentElement, [STATUS.ERROR]);
     }
     return(error);
-  }
+  };
 
   let addStatusClass = (form, className) => {
     form.reset();
     form.classList.add(className);
-  }
+  };
 
-  let sendFormData = async (evt, form, url) => {
+  let sendFormData = async(evt, form, url) => {
     evt.preventDefault();
-    removeClasses(form, [STATUS.ERROR, STATUS.SUCCESS]);
+    window.util.removeClasses(form, [STATUS.ERROR, STATUS.SUCCESS]);
 
     let errors = checkValidate(form);
     if (errors === 0) {
@@ -72,7 +72,7 @@
         addStatusClass(form, STATUS.ERROR);
       }
     }
-  }
+  };
 
   getStorage();
 
@@ -82,7 +82,7 @@
   });
 
   form.addEventListener("input", (evt) => {
-    removeClasses(evt.target.parentElement, [STATUS.ERROR]);
-    removeClasses(form, [STATUS.ERROR, STATUS.SUCCESS]);
+    window.util.removeClasses(evt.target.parentElement, [STATUS.ERROR]);
+    window.util.removeClasses(form, [STATUS.ERROR, STATUS.SUCCESS]);
   });
 })();

@@ -16,7 +16,7 @@ let scrollMenu = (blockId) => {
   let duration = .4 * Math.abs(to);
 
   // Анимация скролла
-  requestAnimationFrame(step = (timestamp) => {
+  requestAnimationFrame(function step(timestamp) {
     // timestamp метка времени от начала анимации
     // Сколько прошло времени (timestamp - start)
     // (timestamp - start) / duration приравниваем к 1
@@ -36,13 +36,13 @@ let scrollMenu = (blockId) => {
     // Отменяем прокрутку если крутим колесом мышки
     document.addEventListener("wheel", function () {
       cancelAnimationFrame(temp);
-    })
-  })
-}
+    });
+  });
+};
 
-list.addEventListener("click", (evt) => {
+window.util.list.addEventListener("click", (evt) => {
   evt.preventDefault();
-  let link = evt.target.getAttribute("href")
-  closeOrOpenMenu(list);
-  setTimeout(()=>{scrollMenu(link)}, 300);  // 300 = времени анимации скрытия списка меню (прописано в css)
+  let link = evt.target.getAttribute("href");
+  window.util.closeOrOpenMenu(window.util.list);
+  setTimeout(()=>{scrollMenu(link);}, 300);  // 300 = времени анимации скрытия списка меню (прописано в css)
 });
