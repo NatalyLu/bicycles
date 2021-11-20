@@ -5,8 +5,17 @@
   "main": "gulpfile.js",
   "scripts": {
     "build": "gulp build",
-    "start": "gulp"
+    "start": "gulp",
+    "eslint": "eslint \"build/js/script.js\"",
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"source/sass/**/*.scss\" ",
+    "test": "npm run eslint && npm run editorconfig && npm run stylelint"
   },
+  "editorconfig-cli": [
+    "source/*.html",
+    "source/js/*.js",
+    "source/sass/**/*.scss"
+  ],
   "keywords": [
     "bicycles",
     "sport"
@@ -25,6 +34,10 @@
     "autoprefixer": "^10.4.0",
     "browser-sync": "^2.27.7",
     "del": "^6.0.0",
+    "editorconfig": "^0.15.3",
+    "editorconfig-cli": "^0.3.0",
+    "eslint": "^8.2.0",
+    "eslint-config-htmlacademy": "^5.0.0",
     "gulp": "^4.0.2",
     "gulp-avif": "^1.0.1",
     "gulp-concat": "^2.6.1",
@@ -38,11 +51,14 @@
     "gulp-svgstore": "^8.0.0",
     "gulp-terser-js": "^5.2.2",
     "gulp-webp": "^4.0.1",
+    "postcss": "^8.3.8",
     "postcss-csso": "^5.0.1",
-    "sass": "^1.43.4"
+    "postcss-scss": "^4.0.2",
+    "sass": "^1.43.4",
+    "stylelint": "^14.1.0",
+    "stylelint-config-htmlacademy": "^0.1.11"
   },
   "dependencies": {
-    "gulp-imagemin": "^7.1.0",
-    "postcss": "^8.3.8"
+    "gulp-imagemin": "^7.1.0"
   }
 }
