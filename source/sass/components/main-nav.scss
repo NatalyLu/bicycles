@@ -1,7 +1,7 @@
 .main-nav {
   @include center;
   max-width: $max-width-smaller;
-  margin-bottom: 256px;
+  margin-bottom: 252px;
   border-bottom: 1px solid rgba($contrast-color, .2);
 
   @media (max-width: $tablet-width) {
@@ -11,12 +11,12 @@
     position: relative;
     max-width: 100%;
     min-height: 50px;
-    margin-bottom: 84px;
+    margin-bottom: 82px;
     border: none;
   }
 
   @media (max-width: $mobile-width) {
-    margin-bottom: 70px;
+    margin-bottom: 65px;
   }
 }
 
@@ -51,30 +51,32 @@
       padding: 0;
       margin-bottom: 30px;
     }
+  }
 
-    &:first-child .main-nav__link{
+  li:first-child .main-nav__link {
+    @media (min-width: $tablet-width) {
       padding-left: 20px;
-    }
-
-    &:last-child {
-      @media (max-width: $tablet-width) {
-        margin-bottom: 0;
-      }
-
-      .main-nav__link{
-        padding-right: 20px;
-      }
     }
   }
 
-  &.element-hidden {
+  li:last-child {
     @media (max-width: $tablet-width) {
-      visibility: hidden;
-      min-height: 0;
-      height: 0;
-      padding: 0;
-      opacity: 0;
+      margin-bottom: 0;
     }
+
+    .main-nav__link{
+      padding-right: 20px;
+    }
+  }
+}
+
+.main-nav__list.element-hidden {
+  @media (max-width: $tablet-width) {
+    visibility: hidden;
+    min-height: 0;
+    height: 0;
+    padding: 0;
+    opacity: 0;
   }
 }
 
@@ -90,7 +92,7 @@
   @media (max-width: $tablet-width) {
     width: 100%;
     position: relative;
-    padding: 17px 40px 17px 20px;
+    padding: 17px 40px 15px 17px;
     font-family: "OpenSans-regular", "Arial", sans-serif;
     font-size: 1.25rem;
     line-height: 1.75rem;
@@ -104,7 +106,7 @@
       position: absolute;
       width: 8px;
       height: 8px;
-      right: 20px;
+      right: 26px;
       top: calc(50% - 5px);
       border-bottom: 2px solid rgba($middle-text-color, .5);
       border-right: 2px solid rgba($middle-text-color, .5);
@@ -145,10 +147,10 @@
     right: 0;
     z-index: 2;
   }
+}
 
-  &.open {
-    @media (max-width: $tablet-width) {
-      background-color: $contrast-color;
-    }
+.main-nav__burger.open {
+  @media (max-width: $tablet-width) {
+    background-color: $contrast-color;
   }
 }

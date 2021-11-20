@@ -13,82 +13,6 @@
     transform: scale(1.2);
   }
 
-  &:nth-child(1) {
-    z-index: 0;
-
-    &:before {
-      top: 156px;
-      left: -60px;
-      width: 126px;
-      height: 126px;
-      border: 27px solid $active-color;
-      border-radius: 50%;
-      z-index: -1;
-
-      @media (max-width: $tablet-width) {
-        width: 91px;
-        height: 91px;
-        top: 201px;
-        left: -37px;
-        border-width: 18px;
-      }
-
-      @media (max-width: $tablet-width) {
-        left: -24px;
-      }
-    }
-  }
-
-  &:nth-child(2) {
-    &:before,
-    &:after {
-      width: 31px;
-      height: 31px;
-      border: 8px solid $active-color;
-
-      @media (max-width: $tablet-width) {
-        display: none;
-      }
-    }
-
-    &:before {
-      top: -18px;
-      left: -19px;
-    }
-
-    &:after {
-      bottom: 29px;
-      right: -23px;
-    }
-
-    &:hover:before {
-      transform: scale(1.2) rotate(135deg);
-    }
-
-    &:hover:after {
-      transform: scale(1.2) rotate(-135deg);
-    }
-  }
-
-  &:nth-child(3) {
-    &:before {
-      top: -32px;
-      right: -36px;
-      width: 61px;
-      height: 61px;
-      border: 17px solid $active-color;
-      border-radius: 50%;
-
-      @media (max-width: $tablet-width) {
-        top: -20px;
-        right: -25px;
-        width: 42px;
-        height: 42px;
-        border-width: 13px;
-      }
-    }
-  }
-
   figure {
     display: block;
     min-width: 200px;
@@ -98,14 +22,106 @@
   }
 }
 
+.card:nth-child(1) {
+  z-index: 0;
+
+  &:before {
+    top: 158px;
+    left: -56px;
+    width: 126px;
+    height: 126px;
+    border: 27px solid $active-color;
+    border-radius: 50%;
+    z-index: -1;
+
+    @media (max-width: $tablet-width) {
+      width: 90px;
+      height: 90px;
+      top: 195px;
+      left: -37px;
+      border-width: 18px;
+    }
+
+    @media (max-width: $mobile-width) {
+      width: 86px;
+      height: 86px;
+      top: 190px;
+      left: -25px;
+    }
+  }
+}
+
+.card:nth-child(2) {
+  &:before,
+  &:after {
+    width: 31px;
+    height: 31px;
+    border: 8px solid $active-color;
+
+    @media (max-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &:before {
+    top: -16px;
+    left: -18px;
+  }
+
+  &:after {
+    bottom: 31px;
+    right: -22px;
+  }
+
+  &:hover:before {
+    transform: scale(1.2) rotate(135deg);
+  }
+
+  &:hover:after {
+    transform: scale(1.2) rotate(-135deg);
+  }
+}
+
+.card:nth-child(3) {
+  &:before {
+    top: -29px;
+    right: -32px;
+    width: 61px;
+    height: 61px;
+    border: 17px solid $active-color;
+    border-radius: 50%;
+
+    @media (max-width: $tablet-width) {
+      top: -21px;
+      right: -25px;
+      width: 42px;
+      height: 42px;
+      border-width: 13px;
+    }
+
+    @media (max-width: $mobile-width) {
+      width: 39px;
+      height: 39px;
+      // top: 190px;
+      right: -14px;
+    }
+  }
+}
+
 .card__img {
   width: 100%;
   height: auto;
   border-radius: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 
   @media (max-width: $tablet-width) {
-    height: 300px;
+    height: 294px;
+    margin-bottom: 18px;
+  }
+
+  @media (max-width: $mobile-width) {
+    height: auto;
+    max-height: 284px;
   }
 }
 
@@ -113,5 +129,10 @@
   font-family: "OpenSans-semibold", "Arial", sans-serif;
   font-size: 1.375rem;
   line-height: 2.125rem;
+  letter-spacing: -.6px;
   text-align: center;
+
+  @media (max-width: $tablet-width) {
+    letter-spacing: -1px;
+  }
 }

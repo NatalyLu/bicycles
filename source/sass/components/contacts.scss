@@ -1,27 +1,26 @@
 .contacts {
   @include center;
-  @include drop-list-style;display: grid;
+  @include drop-list-style;
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, max-content));
   gap: 20px 90px;
   justify-content: center;
-  justify-items: center;
-  padding: 0 35px;
-  margin-bottom: 98px;
+  justify-items: start;
+  padding: 0 35px 0 93px;
+  margin: 0 auto 98px auto;
   font-family: "OpenSans-regular", "Arial", sans-serif;
 
   @media (max-width: $tablet-width) {
+    justify-content: end;
     margin-bottom: 50px;
+    padding: 0 35px;
   }
 
   @media (max-width: $mobile-width) {
+    justify-items: center;
+    gap: 10px;
     padding: 0 16px;
   }
-}
-
-.contacts__img {
-  margin-right: 15px;
-  fill: none;
-  transition-duration: .3s;
 }
 
 .contacts__link {
@@ -30,6 +29,10 @@
   font-family: "OpenSans-regular", "Arial", sans-serif;
   color: $main-color-more-opacity;
   text-decoration: none;
+
+  @media (max-width: $mobile-width) {
+    letter-spacing: -.4px;
+  }
 
   span {
     transition-duration: .3s;
@@ -48,5 +51,21 @@
 
   &:focus span {
     opacity: .5;
+  }
+}
+
+.contacts__link--phone {
+  @media (max-width: $mobile-width) {
+    margin-right: 20px;
+  }
+}
+
+.contacts__img {
+  margin-right: 16px;
+  fill: none;
+  transition-duration: .3s;
+
+  @media (max-width: $mobile-width) {
+    margin-right: 14px;
   }
 }

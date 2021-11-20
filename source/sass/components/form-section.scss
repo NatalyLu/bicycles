@@ -4,8 +4,8 @@
   display: flex;
   justify-content: flex-end;
   position: relative;
-  margin-top: -506px;
-  margin-bottom: 340px;
+  margin-top: -499px;
+  margin-bottom: 338px;
 
   @media (max-width: $tablet-width) {
     justify-content: center;
@@ -15,5 +15,9 @@
 }
 
 .form-section__form {
-  max-width: 330px;
+  max-width: 325px;
+
+  @media (max-width: $tablet-width) {
+    max-width: 317px;
+  }
 }

@@ -13,11 +13,12 @@ body {
   margin: 0;
   background: $main-background-color;
   overflow-x: hidden;
+}
 
-  &.menu-open {
-    @media (max-width: $tablet-width) {
-      overflow: hidden;
-    }
+
+body.menu-open {
+  @media (max-width: $tablet-width) {
+    overflow: hidden;
   }
 }
 

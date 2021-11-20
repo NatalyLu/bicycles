@@ -1,5 +1,5 @@
 .header {
-  min-height: 825px;
+  min-height: 816px;
   max-width: 1440px;
   margin: 0 auto;
   background-color: $main-color;
@@ -16,11 +16,12 @@
   background-repeat: no-repeat;
 
   @media (max-width: $tablet-width) {
-    min-height: 340px;
-    margin-bottom: 70px;
+    min-height: 333px;
+    margin-bottom: 67px;
   }
 
   @media (max-width: $mobile-width) {
-    min-height: 390px;
+    min-height: 370px;
+    margin-bottom: 63px;
   }
 }

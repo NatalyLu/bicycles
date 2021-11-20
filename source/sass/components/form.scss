@@ -12,83 +12,85 @@
     height: 0;
     transition: width, height .3s ease-in-out;
   }
+}
 
-  &.success {
-    &:before,
-    &:after {
-      visibility: visible;
-    }
-
-    &:before {
-      width: 100px;
-      height: 100px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      border-radius: 50%;
-      border: 8px solid rgba($active-color, .5);
-      background-color: rgba($contrast-color, .7);
-    }
-
-    &:after {
-      width: 30px;
-      height: 40px;
-      top: calc(50% - 33px);
-      left: calc(50% - 18px);
-      transform: rotate(45deg);
-      border-bottom: 8px solid rgba($active-color, .5);
-      border-right: 8px solid rgba($active-color, .5);
-    }
+.form.success {
+  &:before,
+  &:after {
+    visibility: visible;
   }
 
-  &.error {
-    &:before,
-    &:after {
-      visibility: visible;
-    }
+  &:before {
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 8px solid rgba($active-color, .5);
+    background-color: rgba($contrast-color, .7);
+  }
 
-    &:before {
-      content: "Ошибка";
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: auto;
-      height: auto;
-      padding: 20px 30px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      border: 3px solid $error-color;
-      border-radius: 6px;
-      background-color: rgba($main-color, .5);
-      font-family: "OpenSans-bold", "Arial", sans-serif;
-      font-size: 1.6rem;
-      line-height: 2rem;
-      color: $contrast-color;
-    }
+  &:after {
+    width: 30px;
+    height: 40px;
+    top: calc(50% - 33px);
+    left: calc(50% - 18px);
+    transform: rotate(45deg);
+    border-bottom: 8px solid rgba($active-color, .5);
+    border-right: 8px solid rgba($active-color, .5);
+  }
+}
 
-    &:after {
-      display: none;
-    }
+.form.error {
+  &:before,
+  &:after {
+    visibility: visible;
+  }
+
+  &:before {
+    content: "Ошибка";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    padding: 20px 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid $error-color;
+    border-radius: 6px;
+    background-color: rgba($main-color, .5);
+    font-family: "OpenSans-bold", "Arial", sans-serif;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: $contrast-color;
+  }
+
+  &:after {
+    display: none;
   }
 }
 
 .form__description {
   margin: 0;
+  margin-bottom: 20px;
   font-family: "OpenSans-semibold", "Arial", sans-serif;
   line-height: 1.75rem;
-  text-align: center;
   color: $contrast-color;
-  margin-bottom: 20px;
+  letter-spacing: .4px;
+  text-align: center;
 
   @media (max-width: $tablet-width) {
     color: $main-color;
     font-size: 1.125rem;
-    margin-bottom: 30px;
+    letter-spacing: -.4px;
+    margin-bottom: 33px;
   }
 
   @media (max-width: $mobile-width) {
-    margin-bottom: 30px;
+    margin-bottom: 17px;
   }
 }
 
@@ -96,28 +98,42 @@
   margin-bottom: 20px;
   cursor: pointer;
 
-  input {
-    width: 100%;
-    padding: 12px 30px;
-    border: 1px solid $inputs-border;
-    border-radius: 6px;
-    font-size: 1rem;
-    line-height: 1.5rem;
+  @media (max-width: $tablet-width) {
+    margin-bottom: 19px;
+  }
+}
 
+.form__field input {
+  width: 100%;
+  padding: 14px 28px 7px 30px;
+  border: 1px solid $inputs-border;
+  border-radius: 6px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: -.4px;
+
+  @media (max-width: $mobile-width) {
+    padding: 13px 20px 7px 22px;
+    letter-spacing: -.8px;
+  }
+
+  &::placeholder {
+    color: rgba($secondary-text-color, .5);
+
+    @media (max-width: $mobile-width) {
+      letter-spacing: -.8px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    outline: 2px solid $active-color;
     &::placeholder {
-      color: rgba($secondary-text-color, .5);
-    }
-
-    &:hover,
-    &:focus {
-      outline: 2px solid $active-color;
-      &::placeholder {
-        color: rgba($secondary-text-color, .8);
-      }
+      color: rgba($secondary-text-color, .8);
     }
   }
+}
 
-  &.error {
-    outline: 4px solid red;
-  }
+.form__field.error {
+  outline: 2px solid $error-color;
 }

@@ -4,21 +4,21 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-bottom: 38px;
+  margin-bottom: 33px;
   padding: 0 35px;
 
   @media (max-width: $tablet-width) {
-    margin-bottom: 20px;
+    margin-bottom: 19px;
   }
 
   @media (max-width: $mobile-width) {
-    margin-bottom: 30px;
+    margin-bottom: 26px;
     padding: 0;
   }
 }
 
 .address__title {
-  margin-bottom: 30px;
+  margin-bottom: 27px;
 
   @media (max-width: $tablet-width) {
     margin-bottom: 20px;
@@ -30,23 +30,29 @@
   font-family: "OpenSans-regular", "Arial", sans-serif;
   font-size: 1.125rem;
   line-height: 2rem;
+  letter-spacing: -.6px;
   color: $main-color-opacity;
-  margin: 0 0 42px 0;
+  margin: 0 0 38px 0;
 
   @media (max-width: $tablet-width) {
     max-width: 100%;
     margin-bottom: 20px;
     padding: 0 16px;
+    letter-spacing: -.7px;
   }
 
   @media (max-width: $mobile-width) {
-    margin-bottom: 25px;
+    margin-bottom: 18px;
+    padding: 0 25px;
+    line-height: 1.86rem;
+    letter-spacing: -1px;
   }
 }
 
 .address__map {
   display: flex;
   max-width: 957px;
+  max-height: 523px;
   width: 100%;
   background-image: image-set(
     url("/img/map/map.avif") 1x,
@@ -61,7 +67,7 @@
   background-repeat: no-repeat;
 
   @media (max-width: $mobile-width) {
-    height: 250px;
+    height: 235px;
     background-image: image-set(
       url("/img/map/map-mobile.avif") 1x,
       url("/img/map/map-mobile@2x.avif") 2x,
