@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Наш магазин отбирает только самые лучшие велосипеды для продажи">
     <meta name="keywords" content="велосипеды, велосипеды спб, детский велосипед, дорожный велосипед, горный велосипед, спорт, туризм">
-    <meta name="image" name="image" content="/img/svg/logo.svg">
+    <meta name="image" content="/img/svg/logo.svg">
     <meta name="format-detection" content="telephone=yes">
     <title>MooN</title>
     <link rel="stylesheet" type="text/css" href="css/style.min.css">
+    <link rel="preload" href="fonts/opensans-bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/opensans-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/opensans-light.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/opensans-semibold.woff2" as="font" type="font/woff2" crossorigin>
     <meta name="theme-color" content="#ffffff">
   </head>
   <body id="body">
@@ -46,13 +50,14 @@
     </header>
     <main>
       <section class="form-section">
+        <h2 class="visually-hidden">Форма обратного звонка</h2>
         <form action="#" method="POST" class="form-section__form form">
           <p class="form__description">Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
           <div class="form__field">
-            <input type="text" id="name" name="name" placeholder="Введите Ваше Имя" maxlength="100">
+            <input type="text" id="name" name="name" placeholder="Введите Ваше Имя" maxlength="100" required>
           </div>
           <div class="form__field">
-            <input type="tel" id="phone" name="phone" placeholder="Введите Ваш номер телефона" autofocus="autofocus"  maxlength="40">
+            <input type="tel" id="phone" name="phone" placeholder="Введите Ваш номер телефона" autofocus="autofocus"  maxlength="40" required>
           </div>
           <button class="form__button button" name="submit" type="submit">Подобрать велосипед мечты</button>
         </form>
@@ -111,7 +116,7 @@
           <h2 class="video__title sub-title">Видео про велосипеды</h2>
           <p class="video__description">В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
           <div class="video__player">
-            <video class="video__content" src="#" width="929" height="522" poster=""></video>
+            <video class="video__content" src="#" width="929" height="522" poster="poster-in-css"></video>
             <button class="video__button-play button-play" type="button"><span class="visually-hidden">Воспроизвести</span></button>
           </div>
         </div>
@@ -120,7 +125,7 @@
       <section class="address" id="address">
         <h2 class="address__title sub-title">Как нас найти?</h2>
         <p class="address__description">Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
-        <iframe class="address__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Aebbecb84e95bc0420b0250f72e9891f62794e01027d1c7d115cec678d9767722&amp;source=constructor" width="957" height="530" frameborder="0"></iframe>
+        <iframe class="address__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Aebbecb84e95bc0420b0250f72e9891f62794e01027d1c7d115cec678d9767722&amp;source=constructor" width="957" height="528"></iframe>
       </section>
     </main>
 
@@ -137,7 +142,7 @@
           </a>
         </li>
         <li>
-          <a class="contacts__link" href="tel:{+7(499)784-684-46}" aria-label="Телефон для связи" tabindex="1">
+          <a class="contacts__link contacts__link--phone" href="tel:+7(499)784-684-46" aria-label="Телефон для связи" tabindex="1">
             <svg class="contacts__img" width="17" height="24" viewBox="0 0 17 24">
               <use xlink:href="/img/svg/sprite.svg#phone"></use>
             </svg>
@@ -148,6 +153,6 @@
         </li>
       </ul>
     </footer>
-    <script type="text/javascript" src="js/script.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
