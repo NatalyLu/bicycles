@@ -40,7 +40,7 @@ let scrollMenu = (blockId) => {
   })
 }
 
-list.addEventListener('click', (evt) => {
+list.addEventListener("click", (evt) => {
   evt.preventDefault();
   let link = evt.target.getAttribute("href")
   closeOrOpenMenu(list);

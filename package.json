@@ -5,9 +5,7 @@
   "main": "gulpfile.js",
   "scripts": {
     "build": "gulp build",
-    "start": "gulp",
-    "styles": "gulp styles",
-    "test": "npm run stylelint"
+    "start": "gulp"
   },
   "keywords": [
     "bicycles",
