@@ -31,8 +31,6 @@ const styles = () => {
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
-    .pipe(rename("styleControl.css"))
-    .pipe(gulp.dest("build/css"))
     .pipe(postcss([
       autoprefixer(),
       csso()
@@ -58,51 +56,51 @@ const scripts = () => {
         toplevel: true
       }
     }))
-    .on("error", function (error) {
-      this.emit("end")
+    .on("error", function () {
+      this.emit("end");
     })
     .pipe(rename("script.min.js"))
     .pipe(gulp.dest("build/js"))
     .pipe(sync.stream());
-}
+};
 exports.scripts = scripts;
 
 // Images
 const optimizeImages = () => {
   return gulp.src("source/img/**/*.{jpg,png,svg}")
-  .pipe(imagemin([
-    imagemin.mozjpeg({progressive: true}),
-    imagemin.optipng({optimizationLevel: 3}),
-    imagemin.svgo()
-  ]))
-  .pipe(gulp.dest("build/img"))
+    .pipe(imagemin([
+      imagemin.mozjpeg({progressive: true}),
+      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.svgo()
+    ]))
+    .pipe(gulp.dest("build/img"));
 };
 exports.optimizeImages = optimizeImages;
 
 // WebP
 const createWebp = () => {
   return gulp.src("source/img/**/*.{jpg,png}")
-  .pipe(webp({quality: 80}))
-  .pipe(gulp.dest("build/img"))
+    .pipe(webp({quality: 80}))
+    .pipe(gulp.dest("build/img"));
 };
 exports.createWebp = createWebp;
 
 // Avif
 const createAvif = () => {
   return gulp.src("source/img/**/*.{png,jpg}")
-  .pipe(avif({quality: 80}))
-  .pipe(gulp.dest("build/img"));
+    .pipe(avif({quality: 80}))
+    .pipe(gulp.dest("build/img"));
 };
 exports.createAvif = createAvif;
 
 // Sprite
 const sprite = () => {
-return gulp.src("build/img/svg/sprite/*.svg")
-.pipe(svgstore({
-  inlineSvg: true
-}))
-.pipe(rename("sprite.svg"))
-.pipe(gulp.dest("build/img/svg/"));
+  return gulp.src("build/img/svg/sprite/*.svg")
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("build/img/svg/"));
 };
 exports.sprite = sprite;
 
@@ -114,7 +112,7 @@ const copy = (done) => {
   ], {
     base: "source"
   })
-  .pipe(gulp.dest("build"))
+    .pipe(gulp.dest("build"));
   done();
 };
 exports.copy = copy;
@@ -155,7 +153,7 @@ exports.clean = clean;
 // simpleClean
 const simpleClean = () => {
   return del(["build/css", "build/js", "build/index.html"]);
-}
+};
 exports.clean = simpleClean;
 
 // Build
