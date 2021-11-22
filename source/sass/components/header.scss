@@ -3,14 +3,7 @@
   max-width: 1440px;
   margin: 0 auto;
   background-color: $main-color;
-  background-image: image-set(
-    url("/img/main-img.avif") 1x,
-    url("/img/main-img@2x.avif") 2x,
-    url("/img/main-img.webp") 1x,
-    url("/img/main-img@2x.webp") 2x,
-    url("/img/main-img.jpg") 1x,
-    url("/img/main-img@2x.jpg") 2x,
-  );
+  background-image: url("/img/backgrounds/main-img@2x.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -21,7 +14,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    min-height: 370px;
-    margin-bottom: 63px;
+    min-height: 372px;
+    margin-bottom: 65px;
   }
 }

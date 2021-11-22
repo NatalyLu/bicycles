@@ -5,7 +5,7 @@
 
   @media (max-width: $tablet-width) {
     padding: 4px;
-    margin-bottom: 150px;
+    margin-bottom: 156px;
   }
 
   @media (max-width: $mobile-width) {
@@ -23,7 +23,7 @@
   top: 98px;
 
   @media (max-width: $tablet-width) {
-    top: 64px;
+    top: 66px;
   }
 
   @media (max-width: $mobile-width) {
@@ -99,14 +99,7 @@
 }
 
 .video__content[poster] {
-  background-image: image-set(
-    url("/img/video/video-poster.avif") 1x,
-    url("/img/video/video-poster@2x.avif") 2x,
-    url("/img/video/video-poster.webp") 1x,
-    url("/img/video/video-poster@2x.webp") 2x,
-    url("/img/video/video-poster.jpg") 1x,
-    url("/img/video/video-poster@2x.jpg") 2x,
-  );
+  background-image: url("/img/video/video-poster@2x.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
