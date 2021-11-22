@@ -79,17 +79,17 @@ exports.optimizeImages = optimizeImages;
 
 // WebP
 const createWebp = () => {
-  return gulp.src("source/img/**/*.{jpg,png}")
+  return gulp.src("source/img/catalog/*.{jpg,png}")
     .pipe(webp({quality: 80}))
-    .pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest("build/img/catalog"));
 };
 exports.createWebp = createWebp;
 
 // Avif
 const createAvif = () => {
-  return gulp.src("source/img/**/*.{png,jpg}")
+  return gulp.src("source/img/catalog/*.{png,jpg}")
     .pipe(avif({quality: 80}))
-    .pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest("build/img/catalog"));
 };
 exports.createAvif = createAvif;
 
