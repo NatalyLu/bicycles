@@ -8,7 +8,7 @@
   justify-items: start;
   padding: 0 35px 0 93px;
   margin: 0 auto 98px auto;
-  font-family: "OpenSans-regular", "Arial", sans-serif;
+  font-family: "opensans-regular", "Arial", sans-serif;
 
   @media (max-width: $tablet-width) {
     justify-content: end;
@@ -26,7 +26,7 @@
 .contacts__link {
   display: flex;
   align-items: center;
-  font-family: "OpenSans-regular", "Arial", sans-serif;
+  font-family: "opensans-regular", "Arial", sans-serif;
   color: $main-color-more-opacity;
   text-decoration: none;
 

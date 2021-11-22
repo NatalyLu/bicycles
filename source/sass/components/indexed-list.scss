@@ -7,7 +7,7 @@
   counter-increment: steps;
   display: grid;
   text-align: center;
-  font-family: "OpenSans-regular", "Arial", sans-serif;
+  font-family: "opensans-regular", "Arial", sans-serif;
   font-size: 1.38rem;
   line-height: 2.13rem;
   letter-spacing: -0.6px;
@@ -17,7 +17,7 @@
   }
 
   &::before {
-    font-family: "OpenSans-bold", "Arial", sans-serif;
+    font-family: "opensans-bold", "Arial", sans-serif;
     font-size: 1.75rem;
     line-height: 2.38rem;
     content: "0" counter(steps);
