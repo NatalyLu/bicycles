@@ -58,7 +58,8 @@
   max-width: 957px;
   max-height: 520px;
   width: 100%;
-  background-image: url("/img/map/map.jpg");
+  background-color: $background-color;
+  background-image: url("../img/map/map.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -69,6 +70,6 @@
 
   @media (max-width: $mobile-width) {
     height: 237px;
-    background-image: url("/img/map/map-mobile.jpg");
+    background-image: url("../img/map/map-mobile.jpg");
   }
 }

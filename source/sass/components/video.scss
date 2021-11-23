@@ -99,7 +99,8 @@
 }
 
 .video__content[poster] {
-  background-image: url("/img/video/video-poster@2x.jpg");
+  background-color: $main-color;
+  background-image: url("../img/video/video-poster@2x.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

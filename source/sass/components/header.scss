@@ -1,9 +1,10 @@
 .header {
   min-height: 816px;
+  width: 100%;
   max-width: 1440px;
   margin: 0 auto;
   background-color: $main-color;
-  background-image: url("/img/backgrounds/main-img@2x.jpg");
+  background-image: url("../img/backgrounds/main-img@2x.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
