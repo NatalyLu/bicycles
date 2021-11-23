@@ -22,7 +22,7 @@
   }
 }
 
-.card:nth-child(1) {
+.card:nth-child(3n+1) {
   z-index: 0;
 
   &::before {
@@ -51,7 +51,7 @@
   }
 }
 
-.card:nth-child(2) {
+.card:nth-child(3n+2) {
   &::before,
   &::after {
     width: 31px;
@@ -82,7 +82,7 @@
   }
 }
 
-.card:nth-child(3) {
+.card:nth-child(3n) {
   &::before {
     top: -29px;
     right: -32px;

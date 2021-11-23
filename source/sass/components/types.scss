@@ -32,12 +32,11 @@
 .types__list {
   @include drop-list-style;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 0 20px;
 
   @media (max-width: $tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     margin-right: -50px;
     margin-bottom: -50px;
