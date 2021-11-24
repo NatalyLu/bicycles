@@ -4,13 +4,17 @@
   display: flex;
   justify-content: flex-end;
   position: relative;
-  margin-top: -499px;
-  margin-bottom: 338px;
+  margin-top: -502px;
+  margin-bottom: 342px;
 
   @media (max-width: $tablet-width) {
     justify-content: center;
-    margin: 0 auto 50px auto;
+    margin: 0 auto 52px auto;
     padding: 0 16px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 54px;
   }
 }
 

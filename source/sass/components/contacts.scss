@@ -13,13 +13,13 @@
   @media (max-width: $tablet-width) {
     justify-content: end;
     margin-bottom: 50px;
-    padding: 0 35px;
+    padding: 0 43px;
   }
 
   @media (max-width: $mobile-width) {
     justify-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 13px;
     padding: 0 16px;
   }
 }

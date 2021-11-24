@@ -16,6 +16,10 @@ body {
   margin: 0;
   background: $main-background-color;
   overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
 }
 
 

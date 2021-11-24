@@ -86,11 +86,12 @@
     color: $main-color;
     font-size: 1.13rem;
     letter-spacing: -0.4px;
-    margin-bottom: 33px;
+    margin-bottom: 30px;
   }
 
   @media (max-width: $mobile-width) {
-    margin-bottom: 17px;
+    margin-bottom: 21px;
+    letter-spacing: -0.2px;
   }
 }
 
@@ -99,7 +100,7 @@
   cursor: pointer;
 
   @media (max-width: $tablet-width) {
-    margin-bottom: 19px;
+    margin-bottom: 20px;
   }
 }
 
@@ -112,8 +113,12 @@
   line-height: 1.5rem;
   letter-spacing: -0.4px;
 
+  @media (max-width: $tablet-width) {
+    padding: 12px 20px 10px 20px;
+  }
+
   @media (max-width: $mobile-width) {
-    padding: 13px 20px 7px 22px;
+    padding: 13px 20px 10px 25px;
     letter-spacing: -0.8px;
   }
 
@@ -121,7 +126,7 @@
     color: rgba($secondary-text-color, 0.5);
 
     @media (max-width: $mobile-width) {
-      letter-spacing: -0.8px;
+      letter-spacing: -0.4px;
     }
   }
 

@@ -9,8 +9,8 @@
   }
 
   @media (max-width: $mobile-width) {
-    padding-top: 29px;
-    margin-bottom: 110px;
+    padding-top: 35px;
+    margin-bottom: 115px;
   }
 }
 
@@ -34,17 +34,13 @@
 
 .video__title {
   max-width: 370px;
-  margin-bottom: 17px;
+  margin-bottom: 20px;
   text-align: center;
   color: $contrast-color;
   letter-spacing: -0.3px;
 
   @media (max-width: $tablet-width) {
     margin-bottom: 20px;
-  }
-
-  @media (max-width: $mobile-width) {
-    letter-spacing: -1px;
   }
 }
 
@@ -57,13 +53,13 @@
 
   @media (max-width: $tablet-width) {
     max-width: 430px;
-    margin-bottom: 37px;
+    margin-bottom: 40px;
     letter-spacing: -0.2px;
   }
 
   @media (max-width: $mobile-width) {
-    margin-bottom: 46px;
-    letter-spacing: -0.5px;
+    margin-bottom: 52px;
+    letter-spacing: 0px;
   }
 }
 
@@ -84,17 +80,17 @@
 
 .video__content {
   width: 100%;
-  max-width: 918px;
+  max-width: 926px;
   height: auto;
-  min-height: 516px;
+  min-height: 521px;
 
   @media (max-width: $tablet-width) {
-    max-width: 493px;
-    min-height: 276px;
+    max-width: 500px;
+    min-height: 282px;
   }
 
   @media (max-width: $mobile-width) {
-    min-height: 153px;
+    min-height: 161px;
   }
 }
 

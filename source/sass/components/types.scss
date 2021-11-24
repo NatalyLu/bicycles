@@ -1,13 +1,13 @@
 .types {
   background-color: $background-color;
-  padding: 149px 0 145px 0;
+  padding: 149px 0;
 
   @media (max-width: $tablet-width) {
-    padding: 54px 0 68px 0;
+    padding: 54px 0 72px 0;
   }
 
   @media (max-width: $mobile-width) {
-    padding: 52px 0 49px 0;
+    padding: 55px 0 51px 0;
   }
 }
 
@@ -16,7 +16,7 @@
 }
 
 .types__title {
-  margin-bottom: 86px;
+  margin-bottom: 90px;
   text-align: center;
 
   @media (max-width: $tablet-width) {
@@ -24,8 +24,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    margin-bottom: 32px;
-    letter-spacing: -0.6px;
+    margin-bottom: 35px;
   }
 }
 
@@ -51,7 +50,7 @@
 .types__list li.card:nth-child(n) {
   @media (max-width: $tablet-width) {
     flex-grow: 1;
-    max-width: 264px;
+    max-width: 270px;
     margin: 0 50px 50px 0;
   }
 
