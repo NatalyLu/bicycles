@@ -51,19 +51,9 @@
     }
   }
 
-  li:first-child .main-nav__link {
-    @media (min-width: $tablet-width) {
-      padding-left: 20px;
-    }
-  }
-
   li:last-child {
     @media (max-width: $tablet-width) {
       margin-bottom: 0;
-    }
-
-    .main-nav__link {
-      padding-right: 20px;
     }
   }
 }
@@ -88,7 +78,7 @@
 
 .main-nav__link {
   display: block;
-  padding: 21px 56px 0;
+  padding: 21px 20px 0;
   color: $contrast-darker-color;
   text-decoration: none;
   font-size: 1rem;
