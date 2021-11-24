@@ -42,10 +42,11 @@
 
 (function () {
 
-  // Если js загружен, скрываем список и показываем кнопку-бургер
+  // Если js загружен, скрываем список и показываем кнопку-бургер, добавляем списку класс "active" для абсолютного позиционирования
   window.util.burger.classList.add("active");
   window.util.burger.classList.remove("open");
   window.util.list.classList.add("element-hidden");
+  window.util.list.classList.add("active");
 
   window.util.burger.addEventListener("click", (evt) => {
     evt.preventDefault();
