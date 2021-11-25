@@ -3,16 +3,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 154px;
+  margin-bottom: 112px;
   padding-top: 50px;
+  // Ширина элемента списка + margin*2 и умноженное на кол-во элементов в строке
+  max-width: calc((262px + (20px * 2)) * 4);
 
   @media (max-width: $tablet-width) {
-    margin-bottom: 71px;
+    margin-bottom: 29px;
     padding-top: 23px;
   }
 
   @media (max-width: $mobile-width) {
-    margin-bottom: 82px;
+    margin-bottom: 40px;
     padding: 23px 16px 0 16px;
   }
 }
@@ -31,17 +33,9 @@
 }
 
 .about__items {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, min-content));
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 38px;
+  align-items: flex-start;
   width: 100%;
-
-  @media (max-width: $tablet-width) {
-    gap: 41px 30px;
-  }
-
-  @media (max-width: $mobile-width) {
-    gap: 43px 30px;
-  }
 }

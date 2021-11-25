@@ -6,6 +6,9 @@
 .indexed-list__item {
   counter-increment: steps;
   display: grid;
+  max-width: 262px;
+  // Необходимо поменять значения ширины блока about при изменении margin для .indexed-list__item
+  margin: 0 20px 42px 20px;
   text-align: center;
   font-family: "opensans-regular", "Arial", sans-serif;
   font-size: 1.38rem;
@@ -14,6 +17,7 @@
 
   @media (max-width: $mobile-width) {
     font-size: 1.13rem;
+    margin: 0 16px 42px 16px;
   }
 
   &::before {

@@ -6,6 +6,8 @@ html {
   font-size: 16px;
   line-height: 32px;
   font-family: "opensans-light", "Arial", sans-serif;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 body {
@@ -15,7 +17,6 @@ body {
   position: relative;
   margin: 0;
   background: $main-background-color;
-  overflow-x: hidden;
 
   &::-webkit-scrollbar {
     width: 0;

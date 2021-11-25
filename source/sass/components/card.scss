@@ -1,5 +1,20 @@
 .card {
   position: relative;
+  height: max-content;
+  min-width: 270px;
+  width: 100%;
+  max-width: 342px;
+  // Необходимо поменять значения ширины блока about при изменении margin для .indexed-list__item
+  margin: 0 25px 80px 25px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 50px;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-width: 200px;
+    margin-bottom: 40px;
+  }
 
   &::before,
   &::after {
@@ -24,6 +39,11 @@
 
 .card:nth-child(3n+1) {
   z-index: 0;
+  margin-top: -30px;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 0;
+  }
 
   &::before {
     top: 158px;
@@ -52,6 +72,8 @@
 }
 
 .card:nth-child(3n+2) {
+  justify-self: center;
+
   &::before,
   &::after {
     width: 31px;
@@ -83,6 +105,13 @@
 }
 
 .card:nth-child(3n) {
+  margin-top: -40px;
+  justify-self: end;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 0;
+  }
+
   &::before {
     top: -30px;
     right: -36px;
