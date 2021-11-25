@@ -1,12 +1,13 @@
 .contacts {
   @include center;
   @include drop-list-style;
+  max-width: $max-width-smaller;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, max-content));
   gap: 20px 90px;
   justify-content: center;
   justify-items: start;
-  padding: 0 35px 0 93px;
+  padding: 0 0 0 56px;
   margin: 0 auto 98px auto;
   font-family: "opensans-regular", "Arial", sans-serif;
 
