@@ -3,19 +3,14 @@
   max-width: $max-width-smaller;
   display: flex;
   justify-content: flex-end;
-  position: absolute;
-  top: calc(50% + 33px);
-  left: 50%;
-  transform: translate(-50%,-50%);
+  position: relative;
+  margin-top: -502px;
+  margin-bottom: 342px;
 
   @media (max-width: $tablet-width) {
-    position: relative;
     justify-content: center;
     margin: 0 auto 52px auto;
     padding: 0 16px;
-    top: auto;
-    left: auto;
-    transform: none;
   }
 
   @media (max-width: $mobile-width) {
