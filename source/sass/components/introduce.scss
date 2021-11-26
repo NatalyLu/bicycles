@@ -1,11 +1,17 @@
 .introduce {
-  @include center;
-  max-width: $max-width-smaller;
-  padding-bottom: 30px;
+  // @include center;
+  // max-width: $max-width-smaller;
+  // padding-bottom: 30px;
 
   @media (max-width: $tablet-width) {
-    display: flex;
-    justify-content: center;
+    // width: 100%;
+    // display: flex;
+    // justify-content: center;
+    background-color: $main-color;
+    background-image: url("../img/backgrounds/main-img@2x.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }
 
