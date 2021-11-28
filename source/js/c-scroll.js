@@ -40,9 +40,11 @@ let scrollMenu = (blockId) => {
   });
 };
 
-window.util.list.addEventListener("click", (evt) => {
-  evt.preventDefault();
-  let link = evt.target.getAttribute("href");
-  window.util.closeOrOpenMenu(window.util.list);
-  setTimeout(()=>{scrollMenu(link);}, 300);  // 300 = времени анимации скрытия списка меню (прописано в css)
-});
+(function () {
+  window.util.mainNav.querySelector(".main-nav__list").addEventListener("click", (evt) => {
+    evt.preventDefault();
+    let link = evt.target.getAttribute("href");
+    window.util.closeOrOpenMenu(window.util.mainNav);
+    setTimeout(()=>{scrollMenu(link);}, 300);  // 300 = времени анимации скрытия списка меню (прописано в css)
+  });
+})();

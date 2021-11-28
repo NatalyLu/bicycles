@@ -10,7 +10,7 @@
 
     body: document.querySelector("body"),
     burger: document.querySelector("#burger"),
-    list: document.querySelector(".main-nav__list"),
+    mainNav: document.querySelector(".main-nav"),
 
     // Функция удаления класса у элемента (если этот класс у него есть)
     removeClasses: (tag, classNames) => {
@@ -24,16 +24,16 @@
     // Функция открытия и закрытия списка меню
     closeOrOpenMenu: (element) => {
       let attributeValue;
-      if ((window.util.burger.classList.contains("active")) && (window.util.burger.classList.contains("open"))) {
+      if ((element.classList.contains("active")) && (window.util.burger.classList.contains("open"))) {
         window.util.body.classList.remove("menu-open");
         window.util.burger.classList.remove("open");
         attributeValue = "false";
-        element.classList.add("element-hidden");
+        element.classList.remove("menu-is-open");
       } else {
         window.util.body.classList.add("menu-open");
         window.util.burger.classList.add("open");
         attributeValue = "true";
-        element.classList.remove("element-hidden");
+        element.classList.add("menu-is-open");
       }
       return(attributeValue);
     },
@@ -42,20 +42,19 @@
 
 (function () {
 
-  // Если js загружен, скрываем список и показываем кнопку-бургер, добавляем списку класс "active" для абсолютного позиционирования
-  window.util.burger.classList.add("active");
+  // Если js загружен, скрываем список и показываем кнопку-бургер
+  const mainNav = window.util.mainNav;
+  mainNav.classList.add("active");
   window.util.burger.classList.remove("open");
-  window.util.list.classList.add("element-hidden");
-  window.util.list.classList.add("active");
 
   window.util.burger.addEventListener("click", (evt) => {
     evt.preventDefault();
-    toggleMenu(evt, window.util.list);
+    toggleMenu(evt, mainNav);
   });
 
   window.util.burger.addEventListener("keydown", (evt) => {
     if (evt.keyCode === window.util.ENTER_KEYCODE) {
-      toggleMenu(evt, window.util.list);
+      toggleMenu(evt, mainNav);
     }
   });
 
@@ -107,12 +106,14 @@ let scrollMenu = (blockId) => {
   });
 };
 
-window.util.list.addEventListener("click", (evt) => {
-  evt.preventDefault();
-  let link = evt.target.getAttribute("href");
-  window.util.closeOrOpenMenu(window.util.list);
-  setTimeout(()=>{scrollMenu(link);}, 300);  // 300 = времени анимации скрытия списка меню (прописано в css)
-});
+(function () {
+  window.util.mainNav.querySelector(".main-nav__list").addEventListener("click", (evt) => {
+    evt.preventDefault();
+    let link = evt.target.getAttribute("href");
+    window.util.closeOrOpenMenu(window.util.mainNav);
+    setTimeout(()=>{scrollMenu(link);}, 300);  // 300 = времени анимации скрытия списка меню (прописано в css)
+  });
+})();
 
 (function () {
   let form = document.querySelector(".form");
