@@ -16,12 +16,6 @@
   }
 }
 
-.button-burger.active {
-  @media (max-width: $tablet-width) {
-    display: flex;
-  }
-}
-
 .button-burger__line {
   position: relative;
 

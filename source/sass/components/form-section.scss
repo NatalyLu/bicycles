@@ -1,11 +1,6 @@
 .form-section {
-  @include center;
-  max-width: $max-width-smaller;
   display: flex;
   justify-content: flex-end;
-  position: relative;
-  margin-top: -502px;
-  margin-bottom: 342px;
 
   @media (max-width: $tablet-width) {
     justify-content: center;
