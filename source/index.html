@@ -17,9 +17,10 @@
   </head>
   <body id="body">
     <header class="header">
+      <!-- Поиск кнопки-бургера производится по id => #burger, .active .open Используем в js, добавление/удаление .active - для показа/скрытия самой кнопки-гамбургер и списка, .open - для превращения гамбургера в крест и показа списка меню -->
       <nav class="main-nav">
-        <button id="burger" class="button-burger main-nav__burger open" type="button" aria-expanded="true"  aria-label="Открыть меню"> <!-- поиск кнопки производится по id => #burger, .active .open Используем в js, добавление/удаление .active - для показа/скрытия самой кнопки-гамбургер, .open - для превращения гамбургера в крест -->
-          <span class="button-burger__line"></span> <!-- .button-burger__line и .element-hidden Используем в js -->
+        <button id="burger" class="button-burger open" type="button" aria-expanded="true"  aria-label="Открыть меню">
+          <span class="button-burger__line"></span>
         </button>
         <ul class="main-nav__list">
           <li>

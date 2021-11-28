@@ -10,7 +10,7 @@
 
     body: document.querySelector("body"),
     burger: document.querySelector("#burger"),
-    list: document.querySelector(".main-nav__list"),
+    mainNav: document.querySelector(".main-nav"),
 
     // Функция удаления класса у элемента (если этот класс у него есть)
     removeClasses: (tag, classNames) => {
@@ -24,16 +24,16 @@
     // Функция открытия и закрытия списка меню
     closeOrOpenMenu: (element) => {
       let attributeValue;
-      if ((window.util.burger.classList.contains("active")) && (window.util.burger.classList.contains("open"))) {
+      if ((element.classList.contains("active")) && (window.util.burger.classList.contains("open"))) {
         window.util.body.classList.remove("menu-open");
         window.util.burger.classList.remove("open");
         attributeValue = "false";
-        element.classList.add("element-hidden");
+        element.classList.remove("menu-is-open");
       } else {
         window.util.body.classList.add("menu-open");
         window.util.burger.classList.add("open");
         attributeValue = "true";
-        element.classList.remove("element-hidden");
+        element.classList.add("menu-is-open");
       }
       return(attributeValue);
     },
