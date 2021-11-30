@@ -145,6 +145,7 @@
   @media (max-width: $tablet-width) {
     height: 300px;
     margin-bottom: 20px;
+    object-fit: fill;
   }
 
   @media (max-width: $mobile-width) {
