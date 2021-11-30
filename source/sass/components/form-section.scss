@@ -1,6 +1,7 @@
 .form-section {
   display: flex;
   justify-content: flex-end;
+  padding-top: 7px;
 
   @media (max-width: $tablet-width) {
     justify-content: center;
