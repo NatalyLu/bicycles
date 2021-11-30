@@ -11,10 +11,15 @@
   margin-bottom: 100px;
 
   @media (max-width: $tablet-width) {
+    min-height: 735px;
     margin-bottom: 0;
     padding: 0;
     background-image: none;
     background-color: $contrast-color;
+  }
+
+  @media (max-width: $tablet-width) {
+    min-height: 804px;
   }
 }
 
